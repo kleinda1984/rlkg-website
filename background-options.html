@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlanta Skyline Background Options</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a3a5c;
+            --navy-light: #2a4a6c;
+            --navy-dark: #0f2840;
+            --blue-accent: #2d7bc4;
+            --blue-light: #4a9ae0;
+            --white: #ffffff;
+            --serif: 'Crimson Pro', Georgia, serif;
+            --sans: 'Montserrat', -apple-system, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--sans);
+            background: #e8e8e8;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--navy);
+            margin-bottom: 10px;
+            font-family: var(--serif);
+        }
+
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 14px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .label {
+            background: var(--navy);
+            color: white;
+            padding: 12px 24px;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-preview {
+            min-height: 550px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            padding: 0 60px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 24px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .hero-label::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 28px;
+            height: 1px;
+            background: var(--blue-light);
+        }
+
+        .hero-title {
+            font-family: var(--serif);
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 24px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero-title span {
+            color: var(--blue-light);
+        }
+
+        .hero-subtitle {
+            font-size: 17px;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            text-shadow: 0 1px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hero-buttons a {
+            padding: 16px 32px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--blue-accent);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+
+        .description {
+            padding: 20px;
+            background: white;
+            border-radius: 0 0 8px 8px;
+            margin-top: -8px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .description h3 {
+            color: var(--navy);
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .description p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Option 1: Navy Monochrome Tint */
+        .option-1 {
+            background: url('images/atlanta-skyline-navy.jpg') center center / cover no-repeat;
+        }
+        .option-1::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(26,58,92,0.7) 0%, rgba(42,74,108,0.5) 100%);
+        }
+
+        /* Option 2: Desaturated Blend */
+        .option-2 {
+            background: url('images/atlanta-skyline-blend.jpg') center center / cover no-repeat;
+        }
+        .option-2::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(26,58,92,0.5) 0%, rgba(42,74,108,0.3) 100%);
+        }
+
+        /* Option 3: Blue Hour Color Grade */
+        .option-3 {
+            background: url('images/atlanta-skyline-bluehour.jpg') center center / cover no-repeat;
+        }
+        .option-3::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(26,58,92,0.6) 0%, rgba(42,74,108,0.4) 100%);
+        }
+
+        /* Option 4: Original with Heavy Navy Overlay */
+        .option-4 {
+            background: url('/mnt/user-data/uploads/istockphoto-805156212-612x612.jpg') center center / cover no-repeat;
+        }
+        .option-4::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(26,58,92,0.85) 0%, rgba(42,74,108,0.75) 100%);
+        }
+
+        /* Option 5: Original with Gradient Fade (Left to Right) */
+        .option-5 {
+            background: url('/mnt/user-data/uploads/istockphoto-805156212-612x612.jpg') center center / cover no-repeat;
+        }
+        .option-5::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(90deg, rgba(26,58,92,0.95) 0%, rgba(26,58,92,0.85) 40%, rgba(42,74,108,0.6) 100%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Atlanta Skyline Photo Background Options</h1>
+    <p class="intro">These options use the actual Atlanta skyline photo as a background, with various color treatments and overlay effects to match your navy color scheme while keeping the image visible.</p>
+
+    <!-- Option 1 -->
+    <div class="label">Option 1: Navy Monochrome Tint</div>
+    <div class="hero-preview option-1">
+        <div class="hero-content">
+            <div class="hero-label">Atlanta's Trusted Advocates for Bankruptcy and Litigation</div>
+            <h1 class="hero-title">Experienced Legal Counsel for <span>Complex Financial Matters</span></h1>
+            <p class="hero-subtitle">For over 90 years combined, our attorneys have helped individuals and businesses navigate bankruptcy, restructuring, and litigation with strategic, results-driven representation.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Free Consultation</a>
+                <a href="#" class="btn-secondary">Our Practice Areas</a>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <h3>Navy Monochrome Tint</h3>
+        <p>The photo is converted to grayscale then colorized in navy tones. Creates a cohesive, professional look while keeping the skyline recognizable. Very clean and classic law firm aesthetic.</p>
+    </div>
+
+    <!-- Option 2 -->
+    <div class="label">Option 2: Desaturated + Navy Blend</div>
+    <div class="hero-preview option-2">
+        <div class="hero-content">
+            <div class="hero-label">Atlanta's Trusted Advocates for Bankruptcy and Litigation</div>
+            <h1 class="hero-title">Experienced Legal Counsel for <span>Complex Financial Matters</span></h1>
+            <p class="hero-subtitle">For over 90 years combined, our attorneys have helped individuals and businesses navigate bankruptcy, restructuring, and litigation with strategic, results-driven representation.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Free Consultation</a>
+                <a href="#" class="btn-secondary">Our Practice Areas</a>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <h3>Desaturated + Navy Blend</h3>
+        <p>Keeps some of the original photo's colors but heavily muted and blended with navy. Slightly more visual interest than pure monochrome.</p>
+    </div>
+
+    <!-- Option 3 -->
+    <div class="label">Option 3: Blue Hour Color Grade</div>
+    <div class="hero-preview option-3">
+        <div class="hero-content">
+            <div class="hero-label">Atlanta's Trusted Advocates for Bankruptcy and Litigation</div>
+            <h1 class="hero-title">Experienced Legal Counsel for <span>Complex Financial Matters</span></h1>
+            <p class="hero-subtitle">For over 90 years combined, our attorneys have helped individuals and businesses navigate bankruptcy, restructuring, and litigation with strategic, results-driven representation.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Free Consultation</a>
+                <a href="#" class="btn-secondary">Our Practice Areas</a>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <h3>Blue Hour Color Grade</h3>
+        <p>Color-graded to look like "blue hour" photography (the time just after sunset). Shifts warm tones to cool blues while maintaining some depth and contrast.</p>
+    </div>
+
+    <!-- Option 4 -->
+    <div class="label">Option 4: Original Photo with Heavy Navy Overlay</div>
+    <div class="hero-preview option-4">
+        <div class="hero-content">
+            <div class="hero-label">Atlanta's Trusted Advocates for Bankruptcy and Litigation</div>
+            <h1 class="hero-title">Experienced Legal Counsel for <span>Complex Financial Matters</span></h1>
+            <p class="hero-subtitle">For over 90 years combined, our attorneys have helped individuals and businesses navigate bankruptcy, restructuring, and litigation with strategic, results-driven representation.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Free Consultation</a>
+                <a href="#" class="btn-secondary">Our Practice Areas</a>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <h3>Original Photo with Heavy Navy Overlay</h3>
+        <p>Uses the original sunset photo with a strong navy gradient overlay (85% opacity). You can still see hints of the warm sunset colors peeking through, adding subtle warmth.</p>
+    </div>
+
+    <!-- Option 5 -->
+    <div class="label">Option 5: Gradient Fade (Solid Left, Image Right)</div>
+    <div class="hero-preview option-5">
+        <div class="hero-content">
+            <div class="hero-label">Atlanta's Trusted Advocates for Bankruptcy and Litigation</div>
+            <h1 class="hero-title">Experienced Legal Counsel for <span>Complex Financial Matters</span></h1>
+            <p class="hero-subtitle">For over 90 years combined, our attorneys have helped individuals and businesses navigate bankruptcy, restructuring, and litigation with strategic, results-driven representation.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Free Consultation</a>
+                <a href="#" class="btn-secondary">Our Practice Areas</a>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <h3>Gradient Fade (Solid Left, Image Right)</h3>
+        <p>Nearly solid navy on the left where text appears, fading to reveal more of the skyline image on the right. Ensures perfect text readability while showing off the Atlanta skyline. <strong>This is often the most practical choice.</strong></p>
+    </div>
+
+    <div style="background: white; padding: 25px; border-radius: 8px; margin-top: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <h3 style="color: #1a3a5c; margin-bottom: 15px;">💡 Recommendation</h3>
+        <p style="color: #666; line-height: 1.7; margin-bottom: 15px;">
+            <strong>Option 1 (Navy Monochrome)</strong> or <strong>Option 5 (Gradient Fade)</strong> tend to work best for professional law firm websites:
+        </p>
+        <ul style="color: #666; line-height: 2; margin-left: 20px;">
+            <li><strong>Option 1</strong> is clean, sophisticated, and ensures the skyline doesn't compete with your branding</li>
+            <li><strong>Option 5</strong> gives maximum text readability while still showcasing the Atlanta connection</li>
+        </ul>
+        <p style="color: #666; line-height: 1.7; margin-top: 15px;">
+            Let me know which one you prefer, and I'll implement it on the homepage (and any other pages you'd like)!
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KHTT55MS');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY0VN8VRK1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HY0VN8VRK1');
+    </script>
+    <!-- End Google Analytics -->
+    <meta charset="UTF-8">
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="geo.region" content="US-GA">
+    <meta name="geo.placename" content="Atlanta">
+    <meta name="author" content="Rountree Leitman Klein & Geer, LLC">
+    <meta name="theme-color" content="#1a3a5c">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="images/rountree-leitman-klein-geer-logo-only.jpg">
+    <meta name="description" content="Experienced Atlanta bankruptcy attorneys helping individuals and businesses with Chapter 7, Chapter 11, debt relief, and litigation. Free consultation. Call (404) 584-1238.">
+    <meta name="keywords" content="Atlanta bankruptcy attorney, Georgia bankruptcy lawyer, Chapter 7 bankruptcy Atlanta, Chapter 11 bankruptcy Georgia, business bankruptcy attorney Atlanta">
+    <meta property="og:title" content="Atlanta Bankruptcy & Litigation Attorneys | Rountree Leitman Klein & Geer">
+    <meta property="og:description" content="Experienced Atlanta bankruptcy attorneys helping individuals and businesses with Chapter 7, Chapter 11, debt relief, and litigation. Free consultation. Call (404) 584-1238.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://www.rlkglaw.com/images/og-image.png">
+    <meta property="og:site_name" content="Rountree Leitman Klein & Geer, LLC">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://www.rlkglaw.com/images/og-image.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlanta Bankruptcy & Litigation Attorneys | Rountree Leitman Klein & Geer</title>
+    <link rel="canonical" href="https://www.rlkglaw.com/index.html">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a3a5c;
+            --navy-light: #2a4a6c;
+            --navy-dark: #0f2840;
+            --blue-accent: #2d7bc4;
+            --blue-light: #4a9ae0;
+            --cream: #f5f7fa;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e8e8e8;
+            --gray-600: #6b7280;
+            --serif: 'Crimson Pro', Georgia, serif;
+            --sans: 'Montserrat', -apple-system, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--white);
+            color: var(--navy);
+            line-height: 1.6;
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(10, 22, 40, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled {
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 48px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: var(--serif);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--navy);
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links li {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--blue-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--navy);
+            color: var(--white);
+            padding: 14px 28px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .nav-cta:hover {
+            background: var(--blue-accent);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: url('images/atlanta-skyline-navy.jpg') center 20% / cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26,58,92,0.6) 0%, rgba(42,74,108,0.4) 100%);
+        }
+
+        .hero-pattern {
+            display: none;
+        }
+
+        .hero-pattern::before {
+            display: none;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 40px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--blue-light);
+            font-size: clamp(10px, 1.2vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            white-space: nowrap;
+        }
+
+        .hero-label::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--blue-light);
+        }
+
+        .hero-title {
+            font-family: var(--serif);
+            font-size: clamp(48px, 6vw, 72px);
+            font-weight: 500;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero-title span {
+            color: var(--blue-light);
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--blue-accent);
+            color: var(--white);
+            padding: 18px 36px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background: var(--blue-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 18px 36px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--blue-light);
+            color: var(--blue-light);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            animation: fadeInUp 1s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: var(--serif);
+            font-size: 56px;
+            font-weight: 500;
+            color: var(--blue-light);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-number-text {
+            font-family: var(--serif);
+            font-size: 56px;
+            font-weight: 500;
+            color: var(--blue-light);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Practice Areas */
+        .practice-areas {
+            padding: 120px 40px;
+            background: var(--cream);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 80px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--blue-accent);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .section-label::before,
+        .section-label::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--blue-accent);
+        }
+
+        .section-title {
+            font-family: var(--serif);
+            font-size: clamp(36px, 4vw, 52px);
+            font-weight: 500;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .section-desc {
+            font-size: 17px;
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .practice-card {
+            background: var(--white);
+            padding: 48px 32px;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--blue-accent);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .practice-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(10, 22, 40, 0.1);
+        }
+
+        .practice-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .practice-icon {
+            width: 72px;
+            height: 72px;
+            background: var(--cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            transition: all 0.4s ease;
+        }
+
+        .practice-card:hover .practice-icon {
+            background: var(--navy);
+        }
+
+        .practice-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--navy);
+            transition: stroke 0.4s ease;
+        }
+
+        .practice-card:hover .practice-icon svg {
+            stroke: var(--blue-light);
+        }
+
+        .practice-title {
+            font-family: var(--serif);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .practice-desc {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .practice-link {
+            color: var(--blue-accent);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
+        }
+
+        .practice-link:hover {
+            gap: 12px;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 120px 40px;
+            background: var(--white);
+        }
+
+        .team-label {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--blue-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 32px;
+            margin-top: 60px;
+        }
+
+        .team-label:first-of-type {
+            margin-top: 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 32px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .team-grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+            max-width: 1100px;
+        }
+
+        .team-cta {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .btn-secondary-dark {
+            background: transparent;
+            color: var(--navy);
+            padding: 16px 32px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--navy);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary-dark:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .team-card {
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .team-image {
+            width: 200px;
+            height: 200px;
+            background: var(--white);
+            margin: 0 auto 24px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 50%;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: all 0.5s ease;
+        }
+
+        .team-card:hover .team-image img {
+            filter: grayscale(0%);
+        }
+
+        .team-name {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .team-role {
+            font-size: 13px;
+            color: var(--blue-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Accolades */
+        .accolades {
+            padding: 60px 40px;
+            background: var(--navy);
+        }
+
+        .accolades-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .accolades-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .accolades-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .accolade-link {
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+
+        .accolade-link:hover {
+            opacity: 0.8;
+        }
+
+        .accolade-logo {
+            height: 100px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+            opacity: 0.9;
+            filter: brightness(0) invert(1);
+        }
+
+        .accolade-logo.georgia-trend {
+            margin-top: 10px;
+        }
+
+        .accolade-logo.avvo-logo {
+            margin-top: 8px;
+        }
+
+        .accolade-logo.martindale-logo {
+            margin-top: 15px;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 120px 40px;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: var(--serif);
+            font-size: clamp(36px, 4vw, 52px);
+            font-weight: 500;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .cta-desc {
+            font-size: 18px;
+            color: var(--gray-600);
+            margin-bottom: 40px;
+        }
+
+        .cta-contact {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .cta-item {
+            text-align: center;
+        }
+
+        .cta-label {
+            font-size: 12px;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .cta-value {
+            font-family: var(--serif);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .cta-value a {
+            color: var(--navy);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .cta-value a:hover {
+            color: var(--blue-accent);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy);
+            padding: 80px 40px 40px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+        }
+
+        .footer-brand {
+            color: var(--white);
+        }
+
+        .footer-logo {
+            margin-bottom: 24px;
+        }
+
+        .footer-logo-img {
+            height: 60px;
+            width: auto;
+            opacity: 0.6;
+        }
+
+        .footer-desc {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--blue-accent);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--blue-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-address {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .footer-buttons {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .footer-btn:hover {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 60px auto 0;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+                .footer-disclaimer {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 13px;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .footer-disclaimer a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .footer-disclaimer a:hover {
+            color: var(--white);
+        }
+
+        .footer-disclaimer a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .footer-disclaimer a:hover {
+            color: var(--white);
+        }
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 14px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 1200px) {
+            .practice-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .team-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            .hero-stats {
+                max-width: 500px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .practice-grid {
+                grid-template-columns: 1fr;
+            }
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                padding: 40px;
+            }
+            .cta-contact {
+                flex-direction: column;
+                gap: 24px;
+            }
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            .accolades-logos {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-btn span {
+            width: 24px;
+            height: 2px;
+            background: var(--navy);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 900px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+        }
+    
+        /* Dropdown Menu */
+        .nav-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item > a {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .dropdown-arrow {
+            width: 10px;
+            height: 10px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .dropdown-arrow svg {
+            width: 10px;
+            height: 10px;
+            fill: var(--navy);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item:hover .dropdown-arrow svg {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white);
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            padding: 12px 0;
+            margin-top: 20px;
+            z-index: 100;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            margin-top: 10px;
+        }
+
+        .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid var(--white);
+        }
+
+        .dropdown-section {
+            padding: 8px 0;
+        }
+
+        .dropdown-section:not(:last-child) {
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .dropdown-label {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 20px 4px;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--navy);
+            text-decoration: none;
+            text-transform: none;
+            letter-spacing: 0;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-menu a::after {
+            display: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--cream);
+            color: var(--blue-accent);
+        }
+
+    
+        /* ========== MOBILE OPTIMIZATION ========== */
+        
+        /* Hidden checkbox for CSS-only menu toggle */
+        .mobile-menu-checkbox {
+            display: none;
+        }
+
+        /* Mobile Menu Button (now a label) */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 12px;
+            z-index: 1001;
+            position: relative;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .mobile-menu-btn span {
+            width: 24px;
+            height: 2px;
+            background: var(--navy);
+            background: #1a3a5c;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        /* Hamburger to X animation when checked */
+        .mobile-menu-checkbox:checked + .nav .mobile-menu-btn span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-checkbox:checked + .nav .mobile-menu-btn span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-checkbox:checked + .nav .mobile-menu-btn span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        @media (max-width: 900px) {
+            .mobile-menu-btn {
+                display: flex !important;
+            }
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 900px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-links {
+                display: flex !important;
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                width: 100vw !important;
+                height: 100vh !important;
+                background: #ffffff !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 999;
+                padding: 100px 20px 50px;
+                margin: 0;
+                overflow-y: auto;
+            }
+
+            /* Show nav when checkbox is checked (CSS-only) */
+            .mobile-menu-checkbox:checked + .nav .nav-links {
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+                list-style: none;
+            }
+
+            .nav-links > li > a {
+                font-size: 18px;
+                padding: 12px 20px;
+                display: block;
+                color: #1a3a5c;
+                text-decoration: none;
+            }
+
+            .nav-links a {
+                font-size: 18px;
+                color: #1a3a5c;
+            }
+
+            .nav-cta {
+                display: none !important;
+            }
+
+            /* Hide dropdown on mobile - just link to Our Team page */
+            .dropdown-menu {
+                display: none !important;
+            }
+
+            .dropdown-arrow {
+                display: none !important;
+            }
+        }
+
+        /* Mobile Typography & Spacing */
+        @media (max-width: 768px) {
+            .hero-container {
+                padding: 100px 20px 60px !important;
+                grid-template-columns: 1fr !important;
+                gap: 40px !important;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-label {
+                justify-content: center;
+                flex-wrap: wrap;
+                white-space: normal;
+            }
+
+            .hero-label::before {
+                display: none;
+            }
+
+            .hero-title, .page-title {
+                font-size: 28px !important;
+                line-height: 1.2 !important;
+            }
+
+            .hero-title span {
+                display: inline;
+            }
+
+            .section-title {
+                font-size: 24px !important;
+            }
+
+            .hero-subtitle, .page-subtitle {
+                font-size: 15px !important;
+                max-width: 100% !important;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+
+            .hero-stats {
+                padding: 30px 20px !important;
+                max-width: 100% !important;
+            }
+
+            .nav-container {
+                padding: 0 15px !important;
+                height: 70px !important;
+            }
+
+            .logo-img {
+                height: 40px !important;
+            }
+
+            .section-header {
+                padding: 0 20px !important;
+            }
+
+            .section-desc {
+                font-size: 15px !important;
+                padding: 0 10px;
+            }
+
+            /* Team grid fixes */
+            .team-grid, .team-grid-4 {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+                padding: 0 20px !important;
+                max-width: 100% !important;
+            }
+
+            .team-image {
+                width: 150px !important;
+                height: 150px !important;
+            }
+
+            .team-name {
+                font-size: 18px !important;
+            }
+
+            .team-card {
+                padding: 0 10px;
+            }
+
+            /* Practice grid fixes */
+            .practice-grid {
+                grid-template-columns: 1fr !important;
+                padding: 0 20px !important;
+            }
+
+            .practice-areas, .team, .accolades, .cta {
+                padding: 60px 20px !important;
+            }
+
+            /* Page header for inner pages */
+            .page-header {
+                padding: 120px 20px 50px !important;
+            }
+
+            /* Profile pages */
+            .profile-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .profile-sidebar {
+                position: static !important;
+            }
+
+            .attorney-profile {
+                padding: 30px 20px !important;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .hero-title, .page-title {
+                font-size: 24px !important;
+            }
+
+            .section-title {
+                font-size: 20px !important;
+            }
+
+            .hero-stats {
+                padding: 20px 15px !important;
+            }
+
+            .stat-number {
+                font-size: 32px !important;
+            }
+
+            .team-image {
+                width: 120px !important;
+                height: 120px !important;
+            }
+        }
+
+        /* Mobile Footer */
+        @media (max-width: 768px) {
+            .footer {
+                padding: 60px 20px 30px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .footer-brand {
+                text-align: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .footer-links {
+                text-align: center;
+            }
+        }
+
+        /* Touch-friendly targets */
+        @media (max-width: 900px) {
+            .btn-primary, .btn-secondary, .nav-cta, .cta-button, .footer-btn {
+                min-height: 48px;
+                min-width: 48px;
+                padding: 14px 24px;
+            }
+
+            .social-link {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Rountree Leitman Klein & Geer, LLC",
+        "description": "Full service law firm specializing in business and personal bankruptcy, debt restructuring, collections, and litigation.",
+        "url": "https://www.rlkglaw.com",
+        "telephone": "+1-404-584-1238",
+        "email": "contact@rlkglaw.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2987 Clairmont Road, Suite 350",
+            "addressLocality": "Atlanta",
+            "addressRegion": "GA",
+            "postalCode": "30329",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "33.8189034",
+            "longitude": "-84.3229838"
+        },
+        "openingHours": "Mo-Fr 09:00-17:00",
+        "priceRange": "$$",
+        "areaServed": {
+            "@type": "State",
+            "name": "Georgia"
+        },
+        "serviceType": ["Bankruptcy Law", "Business Bankruptcy", "Personal Bankruptcy", "Litigation", "Creditor Rights"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "10",
+            "bestRating": "10",
+            "ratingCount": "30"
+        }
+    }
+    </script>
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHTT55MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Navigation -->
+    <!-- Mobile Menu Checkbox (CSS-only toggle) -->
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+    
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-transparent.png" alt="RLKG Law" class="logo-img">
+            </a>
+                                                <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="practice-areas.html">Practice Areas</a></li>
+                <li class="nav-item">
+                    <a href="our-team.html">Our Team <span class="dropdown-arrow"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <div class="dropdown-label">Partners</div>
+                            <a href="will-rountree.html">William A. Rountree</a>
+                            <a href="hal-leitman.html">Hal Leitman</a>
+                            <a href="david-klein.html">David S. Klein</a>
+                            <a href="will-geer.html">Will B. Geer</a>
+                            <a href="mike-bargar.html">Michael D. Bargar</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <div class="dropdown-label">Senior Counsel</div>
+                            <a href="ceci-christy.html">Ceci Christy</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <div class="dropdown-label">Associates</div>
+                            <a href="william-matthews.html">William G. Matthews</a>
+                            <a href="shawn-eisenberg.html">Shawn Eisenberg</a>
+                            <a href="elizabeth-childers.html">Elizabeth Childers</a>
+                            <a href="caitlyn-powers.html">Caitlyn M. Powers</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="reviews-ratings.html">Reviews &amp; Ratings</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="https://rlkg.cliogrow.com/intake/6f82fac512757b26befe65bdc777f6eb" class="nav-cta">Schedule Consultation</a>
+            <label for="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-pattern"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-label">Atlanta's Trusted Advocates for Bankruptcy and Litigation</div>
+                <h1 class="hero-title">
+                    Strategic Legal Solutions for <span>Complex Challenges</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Rountree Leitman Klein & Geer, LLC is a full service law firm specializing in business and personal bankruptcy, debt restructuring, collections, and litigation. If you are facing a serious legal issue, are overwhelmed with debt, or have a litigation matter to resolve, having the right law firm on your side can significantly impact the outcome of your case. Rountree Leitman Klein & Geer is committed to fighting for positive outcomes for every single one of our clients.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Schedule Consultation</a>
+                    <a href="#practice" class="btn-secondary">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">2018</div>
+                    <div class="stat-label">Established</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000's</div>
+                    <div class="stat-label">of Clients Helped</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Attorneys</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Areas -->
+    <section class="practice-areas" id="practice">
+        <div class="section-header">
+            <div class="section-label">What We Do</div>
+            <h2 class="section-title">Focused Practice, Exceptional Results</h2>
+            <p class="section-desc">Our attorneys bring deep expertise and a client-centered approach to every matter, ensuring you receive strategic counsel tailored to your unique situation.</p>
+        </div>
+        <div class="practice-grid">
+            <a href="practice-areas.html" class="practice-card">
+                <div class="practice-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                    </svg>
+                </div>
+                <h3 class="practice-title">Business Bankruptcy</h3>
+                <p class="practice-desc">Chapter 7, 11, and 12 solutions to help your business reorganize or restructure debt for a stronger financial future.</p>
+                <span class="practice-link">Learn More →</span>
+            </a>
+            <a href="practice-areas.html" class="practice-card">
+                <div class="practice-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                </div>
+                <h3 class="practice-title">Personal Bankruptcy</h3>
+                <p class="practice-desc">Chapter 7 and 11 options that provide honest debt relief and a path to rebuilding your financial life.</p>
+                <span class="practice-link">Learn More →</span>
+            </a>
+            <a href="practice-areas.html" class="practice-card">
+                <div class="practice-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="practice-title">Debtor / Creditor</h3>
+                <p class="practice-desc">Expert guidance on wage garnishment, bank garnishment, foreclosures, evictions, and collections matters.</p>
+                <span class="practice-link">Learn More →</span>
+            </a>
+            <a href="practice-areas.html" class="practice-card">
+                <div class="practice-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
+                    </svg>
+                </div>
+                <h3 class="practice-title">Litigation</h3>
+                <p class="practice-desc">Skilled trial advocacy in civil, real estate, and commercial litigation matters—from bench trials to appeals.</p>
+                <span class="practice-link">Learn More →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="section-header">
+            <div class="section-label">Our Named Partners</div>
+            <h2 class="section-title">Meet Our Named Partners</h2>
+            <p class="section-desc">Our founding partners bring decades of combined experience and a commitment to personalized service, ensuring every client receives the attention their case deserves.</p>
+        </div>
+        
+        <div class="team-grid team-grid-4">
+            <a href="will-rountree.html" class="team-card">
+                <div class="team-image">
+                    <img src="images/will-rountree-profile.png" alt="Will Rountree">
+                </div>
+                <h3 class="team-name">Will Rountree</h3>
+                <div class="team-role">Partner</div>
+            </a>
+            <a href="hal-leitman.html" class="team-card">
+                <div class="team-image">
+                    <img src="images/hal-leitman-profile.png" alt="Hal Leitman">
+                </div>
+                <h3 class="team-name">Hal Leitman</h3>
+                <div class="team-role">Partner</div>
+            </a>
+            <a href="david-klein.html" class="team-card">
+                <div class="team-image">
+                    <img src="images/david-s-klein-profile.png" alt="David Klein">
+                </div>
+                <h3 class="team-name">David Klein</h3>
+                <div class="team-role">Partner</div>
+            </a>
+            <a href="will-geer.html" class="team-card">
+                <div class="team-image">
+                    <img src="images/will-geer-profile.png" alt="Will Geer">
+                </div>
+                <h3 class="team-name">Will Geer</h3>
+                <div class="team-role">Partner</div>
+            </a>
+        </div>
+        <div class="team-cta">
+            <a href="our-team.html" class="btn-secondary-dark">View Full Team</a>
+        </div>
+    </section>
+
+    <!-- Accolades -->
+    <section class="accolades">
+        <div class="accolades-container">
+            <div class="accolades-text">Our Attorneys Are Recognized For Their Work And Expertise</div>
+            <div class="accolades-logos">
+                <a href="https://profiles.superlawyers.com/georgia/atlanta/lawfirm/rountree-leitman-and-klein-llc/008e773a-c0d2-4cfc-9f3c-8c840d0218d1.html" target="_blank" class="accolade-link">
+                    <img src="images/superlawyers.png" alt="Super Lawyers" class="accolade-logo">
+                </a>
+                <a href="https://editions.mydigitalpublication.com/publication/?i=857299&p=72&view=issueViewer" target="_blank" class="accolade-link">
+                    <img src="images/georgia-trend-logo.png" alt="Georgia Trend Legal Elite" class="accolade-logo georgia-trend">
+                </a>
+                <a href="https://www.avvo.com/attorneys/30329-ga-william-rountree-502854.html" target="_blank" class="accolade-link">
+                    <img src="images/avvo-logo.png" alt="Avvo Top Rated" class="accolade-logo avvo-logo">
+                </a>
+                <a href="https://www.martindale.com/organization/rountree-leitman-klein-g-300017969/" target="_blank" class="accolade-link">
+                    <img src="images/martindale-logo.svg" alt="Martindale-Hubbell Peer Rated" class="accolade-logo martindale-logo">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Discuss Your Case?</h2>
+            <p class="cta-desc">Our team is ready to provide the strategic counsel you need. Contact us today to schedule your consultation.</p>
+            <div class="cta-contact">
+                <div class="cta-item">
+                    <div class="cta-label">Call Us</div>
+                    <div class="cta-value"><a href="tel:4045841238">(404) 584-1238</a></div>
+                </div>
+                <div class="cta-item">
+                    <div class="cta-label">Email</div>
+                    <div class="cta-value"><a href="mailto:contact@rlkglaw.com">contact@rlkglaw.com</a></div>
+                </div>
+            </div>
+            <a href="https://rlkg.cliogrow.com/intake/6f82fac512757b26befe65bdc777f6eb" class="btn-primary">Fill Out Intake Form</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+            <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="images/rountree-leitman-klein-geer-white-logo.png" alt="Rountree Leitman Klein & Geer" class="footer-logo-img">
+                <p class="footer-desc">A full service law firm specializing in business and personal bankruptcy, debt restructuring, collections, and litigation.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/rlkglaw" target="_blank" aria-label="Facebook" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/rlkglaw" target="_blank" aria-label="LinkedIn" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Practice Areas</h4>
+                <ul class="footer-links">
+                    <li><a href="practice-areas.html">Business Bankruptcy</a></li>
+                    <li><a href="practice-areas.html">Personal Bankruptcy</a></li>
+                    <li><a href="practice-areas.html">Debtor / Creditor</a></li>
+                    <li><a href="practice-areas.html">Litigation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="our-team.html">Our Team</a></li>
+                    <li><a href="reviews-ratings.html">Reviews &amp; Ratings</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Contact</h4>
+                <div class="footer-address">
+                    Century Plaza I<br>
+                    2987 Clairmont Road<br>
+                    Suite 350<br>
+                    Atlanta, Georgia 30329<br><br>
+                    <a href="tel:4045841238" style="color: var(--blue-light);">(404) 584-1238</a>
+                </div>
+                <div class="footer-buttons">
+                    <a href="https://app.clio.com/link/79KWRpmaXgNk" class="footer-btn">Pay Invoice</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-disclaimer">
+                Rountree Leitman Klein & Geer, LLC is located in Atlanta, Georgia and serves clients in and around Atlanta, Decatur, Scottdale, Clarkston, Avondale Estates, Tucker, Pine Lake, Stone Mountain, Roswell, Alpharetta, Sandy Springs, Johns Creek, Peachtree Corners, Cobb County, Dekalb County, Forsyth County, Gwinnett County, and Fulton County. Attorney Advertising. This website is designed for general information only. The information presented at this site should not be construed to be formal legal advice nor the formation of a lawyer/client relationship. See our profiles at <a href="https://www.lawyers.com/atlanta/georgia/rountree-leitman-klein-geer-llc-3013134-f/" target="_blank">Lawyers.com</a>, <a href="https://www.martindale.com/organization/rountree-leitman-klein-g-300017969/" target="_blank">Martindale.com</a>, and <a href="https://profiles.superlawyers.com/georgia/atlanta/lawfirm/rountree-leitman-and-klein-llc/008e773a-c0d2-4cfc-9f3c-8c840d0218d1.html" target="_blank">SuperLawyers.com</a>. Copyright 2026 - Rountree Leitman Klein & Geer, LLC.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.practice-card, .team-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+    <script>
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var checkbox = document.getElementById('mobile-menu-toggle');
+                if (checkbox) checkbox.checked = false;
+            });
+        });
+        
+        // Netlify Identity redirect after login
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>

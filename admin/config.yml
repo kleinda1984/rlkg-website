@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Enables the editorial workflow for draft/review/publish states
+publish_mode: editorial_workflow
+
+# Media files configuration
+media_folder: "images/blog"
+public_folder: "/images/blog"
+
+# Site URL for preview
+site_url: https://www.rlkglaw.com
+display_url: https://www.rlkglaw.com
+logo_url: https://www.rlkglaw.com/images/logo-transparent.png
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "blog/{{slug}}.html"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Publish Date", name: "date", widget: "datetime", required: true }
+      - { label: "Author", name: "author", widget: "select", options: ["William A. Rountree", "Hal J. Leitman", "David S. Klein", "Will B. Geer", "Michael J. Bargar", "Shawn M. Eisenberg", "Elizabeth F. Childers", "Caitlyn M. Powers", "William Z. Matthews", "RLKG Law"], default: "RLKG Law" }
+      - { label: "Category", name: "category", widget: "select", options: ["Bankruptcy", "Chapter 7", "Chapter 11", "Chapter 13", "Real Estate", "Litigation", "Firm News", "Consumer Protection"], required: true }
+      - { label: "Description (for SEO)", name: "description", widget: "text", required: true, hint: "A brief summary for search engines (150-160 characters)" }
+      - { label: "Keywords (for SEO)", name: "keywords", widget: "string", required: false, hint: "Comma-separated keywords" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Read Time (minutes)", name: "read_time", widget: "number", default: 5, min: 1, max: 30 }
+      - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Related Posts"
+        name: "related_posts"
+        widget: "list"
+        required: false
+        max: 3
+        fields:
+          - { label: "Post URL", name: "url", widget: "string", hint: "e.g., bankruptcy-and-divorce.html" }
+          - { label: "Post Title", name: "title", widget: "string" }

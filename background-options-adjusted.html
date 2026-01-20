@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlanta Skyline Background - Adjusted Position</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a3a5c;
+            --navy-light: #2a4a6c;
+            --navy-dark: #0f2840;
+            --blue-accent: #2d7bc4;
+            --blue-light: #4a9ae0;
+            --white: #ffffff;
+            --serif: 'Crimson Pro', Georgia, serif;
+            --sans: 'Montserrat', -apple-system, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--sans);
+            background: #e8e8e8;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--navy);
+            margin-bottom: 10px;
+            font-family: var(--serif);
+        }
+
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 14px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .label {
+            background: var(--navy);
+            color: white;
+            padding: 12px 24px;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-preview {
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            padding: 0 60px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 24px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .hero-label::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 28px;
+            height: 1px;
+            background: var(--blue-light);
+        }
+
+        .hero-title {
+            font-family: var(--serif);
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 24px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero-title span {
+            color: var(--blue-light);
+        }
+
+        .hero-subtitle {
+            font-size: 17px;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            text-shadow: 0 1px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hero-buttons a {
+            padding: 16px 32px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--blue-accent);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+
+        .description {
+            padding: 20px;
+            background: white;
+            border-radius: 0 0 8px 8px;
+            margin-top: -8px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .description h3 {
+            color: var(--navy);
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .description p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Option 1: Navy Monochrome - Image positioned to show building tops */
+        .option-1 {
+            /* background-position: center 20% moves image up while keeping building tops visible */
+            background: url('images/atlanta-skyline-navy.jpg') center 20% / cover no-repeat;
+        }
+        .option-1::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(26,58,92,0.6) 0%, rgba(42,74,108,0.4) 100%);
+        }
+
+        /* Option 2: Desaturated Blend - Image positioned to show building tops */
+        .option-2 {
+            background: url('images/atlanta-skyline-blend.jpg') center 20% / cover no-repeat;
+        }
+        .option-2::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(26,58,92,0.5) 0%, rgba(42,74,108,0.3) 100%);
+        }
+
+        .note-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .note-box p {
+            color: #856404;
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atlanta Skyline Background - Adjusted</h1>
+    <p class="intro">Image position adjusted to show the tops of the buildings (Bank of America Plaza and other landmarks). The image now aligns from the top.</p>
+
+    <div class="note-box">
+        <p><strong>Change made:</strong> Background position set to <code>center 20%</code> - this moves the image up slightly while still keeping the building tops visible.</p>
+    </div>
+
+    <!-- Option 1 -->
+    <div class="label">Option 1: Navy Monochrome Tint (Building Tops Visible)</div>
+    <div class="hero-preview option-1">
+        <div class="hero-content">
+            <div class="hero-label">Atlanta's Trusted Advocates for Bankruptcy and Litigation</div>
+            <h1 class="hero-title">Experienced Legal Counsel for <span>Complex Financial Matters</span></h1>
+            <p class="hero-subtitle">For over 90 years combined, our attorneys have helped individuals and businesses navigate bankruptcy, restructuring, and litigation with strategic, results-driven representation.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Free Consultation</a>
+                <a href="#" class="btn-secondary">Our Practice Areas</a>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <h3>Option 1: Navy Monochrome Tint</h3>
+        <p>The photo is converted to grayscale then colorized in navy tones. Clean, sophisticated, and professional. Building tops including Bank of America Plaza are now fully visible.</p>
+    </div>
+
+    <!-- Option 2 -->
+    <div class="label">Option 2: Desaturated + Navy Blend (Building Tops Visible)</div>
+    <div class="hero-preview option-2">
+        <div class="hero-content">
+            <div class="hero-label">Atlanta's Trusted Advocates for Bankruptcy and Litigation</div>
+            <h1 class="hero-title">Experienced Legal Counsel for <span>Complex Financial Matters</span></h1>
+            <p class="hero-subtitle">For over 90 years combined, our attorneys have helped individuals and businesses navigate bankruptcy, restructuring, and litigation with strategic, results-driven representation.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Free Consultation</a>
+                <a href="#" class="btn-secondary">Our Practice Areas</a>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <h3>Option 2: Desaturated + Navy Blend</h3>
+        <p>Keeps some of the original photo's colors but heavily muted and blended with navy. Slightly more visual depth than pure monochrome. Building tops are now visible.</p>
+    </div>
+
+    <div style="background: white; padding: 25px; border-radius: 8px; margin-top: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <h3 style="color: #1a3a5c; margin-bottom: 15px;">Which do you prefer?</h3>
+        <p style="color: #666; line-height: 1.7;">
+            Let me know which option you'd like to implement, or if you'd like any further adjustments (lighter/darker overlay, different positioning, etc.)
+        </p>
+    </div>
+</body>
+</html>

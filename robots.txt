@@ -1,0 +1,53 @@
+# Robots.txt for rlkglaw.com
+# Rountree Leitman Klein & Geer, LLC - Atlanta Bankruptcy & Litigation Attorneys
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.rlkglaw.com/sitemap.xml
+
+# RSS Feed
+# RSS: https://www.rlkglaw.com/rss.xml
+
+# Crawl-delay for polite crawling (optional)
+Crawl-delay: 1
+
+# Disallow administrative or non-public paths (none currently)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Block AI training crawlers (optional - remove if you want AI indexing)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
