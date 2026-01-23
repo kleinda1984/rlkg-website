@@ -103,6 +103,38 @@
         <priority>0.7</priority>
     </url>
     
+    <!-- Blog Posts 2026 -->
+    <url>
+        <loc>https://www.rlkglaw.com/blog/discharged-debt-taxable-income.html</loc>
+        <lastmod>2026-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://www.rlkglaw.com/images/og-image.png</image:loc>
+            <image:title>Are Debts Discharged in Bankruptcy Considered Taxable Income?</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.rlkglaw.com/blog/chapter-13-income-change.html</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://www.rlkglaw.com/images/og-image.png</image:loc>
+            <image:title>What If My Income Goes Down During My Chapter 13 Case?</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.rlkglaw.com/blog/understanding-equity-bankruptcy.html</loc>
+        <lastmod>2026-01-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://www.rlkglaw.com/images/og-image.png</image:loc>
+            <image:title>What Does It Mean To Have Equity?</image:title>
+        </image:image>
+    </url>
+    
     <!-- Blog Posts 2025 -->
     <url>
         <loc>https://www.rlkglaw.com/blog/bankruptcy-and-divorce.html</loc>
