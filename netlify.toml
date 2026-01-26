@@ -1,0 +1,72 @@
+# Netlify Configuration File
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "."
+
+# Force HTTPS and redirect non-www to www
+[[redirects]]
+  from = "https://rlkglaw.com/*"
+  to = "https://www.rlkglaw.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://rlkglaw.com/*"
+  to = "https://www.rlkglaw.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.rlkglaw.com/*"
+  to = "https://www.rlkglaw.com/:splat"
+  status = 301
+  force = true
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache static assets
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML pages should revalidate
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Sitemap and RSS should be fresh
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/rss.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

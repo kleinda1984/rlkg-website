@@ -7,6 +7,14 @@
 # New format: /blog/post-name.html
 # ============================================
 
+# 2026 Posts
+/blog/are-debts-discharged-in-bankruptcy-considered-taxable-income /blog/discharged-debt-taxable-income.html 301
+/blog/discharged-debt-taxable-income /blog/discharged-debt-taxable-income.html 301
+/blog/what-if-my-income-goes-down-during-my-chapter-13-case /blog/chapter-13-income-change.html 301
+/blog/chapter-13-income-change /blog/chapter-13-income-change.html 301
+/blog/what-does-it-mean-to-have-equity /blog/understanding-equity-bankruptcy.html 301
+/blog/understanding-equity-bankruptcy /blog/understanding-equity-bankruptcy.html 301
+
 # 2025 Posts
 /blog/bankruptcy-and-divorce-a-guide-for-family-lawyers-and-consumers /blog/bankruptcy-and-divorce.html 301
 /blog/rlkg-recognized-for-back-to-school-contribution /blog/back-to-school-contribution.html 301
@@ -23,6 +31,24 @@
 /blog/five-rountree-leitman-klein-geer-llc-attorneys-selected-as-2024-georgia-super-lawyers /blog/super-lawyers-2024.html 301
 /blog/what-every-parent-should-know-about-bankruptcy-and-529-plans /blog/529-plans-bankruptcy.html 301
 /blog/what-every-parent-should-know-about-bankruptcy /blog/529-plans-bankruptcy.html 301
+/blog/the-foreclosure-process-in-georgia /blog/georgia-foreclosure-process.html 301
+/blog/georgia-foreclosure-process /blog/georgia-foreclosure-process.html 301
+/blog/how-bankruptcy-can-improve-your-credit-score /blog/bankruptcy-improve-credit-score.html 301
+/blog/bankruptcy-improve-credit-score /blog/bankruptcy-improve-credit-score.html 301
+/blog/what-every-parent-should-know-about-bankruptcy /blog/parents-guide-bankruptcy.html 301
+/blog/parents-guide-bankruptcy /blog/parents-guide-bankruptcy.html 301
+/blog/how-much-does-chapter-13-bankruptcy-cost /blog/chapter-13-bankruptcy-cost.html 301
+/blog/chapter-13-bankruptcy-cost /blog/chapter-13-bankruptcy-cost.html 301
+/blog/is-there-a-good-time-to-file-for-bankruptcy /blog/best-time-file-bankruptcy.html 301
+/blog/best-time-file-bankruptcy /blog/best-time-file-bankruptcy.html 301
+/blog/how-to-use-bankruptcy-to-lower-your-car-payment /blog/lower-car-payment-bankruptcy.html 301
+/blog/lower-car-payment-bankruptcy /blog/lower-car-payment-bankruptcy.html 301
+/blog/what-bills-you-should-still-pay-after-filing-bankruptcy /blog/bills-to-pay-after-bankruptcy.html 301
+/blog/bills-to-pay-after-bankruptcy /blog/bills-to-pay-after-bankruptcy.html 301
+/blog/common-reasons-people-file-bankruptcy /blog/common-reasons-file-bankruptcy.html 301
+/blog/common-reasons-file-bankruptcy /blog/common-reasons-file-bankruptcy.html 301
+/blog/using-credit-cards-before-filing-bankruptcy /blog/credit-card-use-before-bankruptcy.html 301
+/blog/credit-card-use-before-bankruptcy /blog/credit-card-use-before-bankruptcy.html 301
 
 # 2023 Posts
 /blog/rountree-leitman-klein-geer-llc-hosts-charity-event-for-the-sandwich-project /blog/sandwich-project-2023.html 301
@@ -90,6 +116,9 @@
 /blog/category/civil-procedure /blog.html?category=litigation 301
 /blog/category/credit-card /blog.html?category=bankruptcy 301
 /blog/category/personal-bankruptcy /blog.html?category=bankruptcy 301
+/blog/category/taxes /blog.html?category=taxes 301
+/blog/category/1099-c /blog.html?category=taxes 301
+/blog/category/irs /blog.html?category=taxes 301
 
 # ============================================
 # MAIN PAGE REDIRECTS
