@@ -5,7 +5,7 @@
     <link>https://www.rlkglaw.com/blog.html</link>
     <description>Expert legal insights on bankruptcy, litigation, real estate law, and creditor rights from Atlanta's trusted attorneys.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jan 2026 12:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 04 Feb 2026 12:00:00 -0500</lastBuildDate>
     <atom:link href="https://www.rlkglaw.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://www.rlkglaw.com/images/logo-transparent.png</url>
@@ -13,8 +13,15 @@
       <link>https://www.rlkglaw.com/blog.html</link>
     </image>
 
-    
-                        <item>
+
+        <item>
+            <title>RLKG Law's Winter 2026 Charitable Contributions</title>
+            <link>https://www.rlkglaw.com/blog/winter-2026-charitable-contributions.html</link>
+            <description>RLKG Law is proud to support seven outstanding organizations making a difference in our community this winter, including NAMI Georgia, Camp Kudzu, and Open Hand Atlanta.</description>
+            <pubDate>Wed, 04 Feb 2026 09:00:00 -0500</pubDate>
+            <guid>https://www.rlkglaw.com/blog/winter-2026-charitable-contributions.html</guid>
+        </item>
+        <item>
             <title>Are Debts Discharged in Bankruptcy Considered Taxable Income?</title>
             <link>https://www.rlkglaw.com/blog/discharged-debt-taxable-income.html</link>
             <description>Learn whether debts discharged in bankruptcy are considered taxable income. Understand 1099-C forms and IRS Form 982 to protect yourself from improper tax assessments.</description>
