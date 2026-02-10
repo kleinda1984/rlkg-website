@@ -43,51 +43,397 @@
     <link rel="canonical" href="https://www.rlkglaw.com/william-matthews.html">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --navy: #1a3a5c; --navy-light: #2a4a6c; --blue-accent: #2d7bc4; --blue-light: #4a9ae0; --cream: #f5f7fa; --white: #ffffff; --gray-200: #e8e8e8; --gray-600: #6b7280; --serif: 'Crimson Pro', Georgia, serif; --sans: 'Montserrat', -apple-system, sans-serif; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--sans); background: var(--white); color: var(--navy); line-height: 1.6; }
-        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(10, 22, 40, 0.08); }
-        .nav.scrolled { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08); }
-        .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; height: 80px; }
-        .logo { display: flex; align-items: center; text-decoration: none; }
-        .logo-img { height: 48px; width: auto; }
-        .nav-links { display: flex; gap: 40px; list-style: none; align-items: center; }
-        .nav-links li { display: flex; align-items: center; }
-        .nav-links a { font-size: 14px; font-weight: 500; color: var(--navy); text-decoration: none; text-transform: uppercase; }
-        .nav-cta { background: var(--navy); color: var(--white); padding: 14px 28px; font-size: 13px; font-weight: 600; text-transform: uppercase; text-decoration: none; }
-        .page-header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 160px 40px 80px; text-align: center; }
-        .page-label { color: var(--blue-light); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
-        .page-title { font-family: var(--serif); font-size: clamp(42px, 5vw, 64px); font-weight: 500; color: var(--white); margin-bottom: 12px; }
-        .page-role { font-size: 20px; color: var(--blue-light); font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
-        .attorney-profile { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
-        .profile-grid { display: grid; grid-template-columns: 350px 1fr; gap: 60px; }
-        .profile-sidebar { position: sticky; top: 120px; height: fit-content; }
-        .profile-image { width: 100%; border-radius: 8px; margin-bottom: 24px; }
-        .profile-contact { background: var(--cream); padding: 24px; border-radius: 8px; margin-bottom: 24px; }
-        .profile-contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-        .profile-contact-item:last-child { margin-bottom: 0; }
-        .profile-contact-icon { width: 40px; height: 40px; background: var(--blue-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-        .profile-contact-icon svg { width: 20px; height: 20px; stroke: var(--white); fill: none; }
-        .profile-contact-label { font-size: 12px; color: var(--gray-600); text-transform: uppercase; letter-spacing: 1px; }
-        .profile-contact-value { font-size: 15px; color: var(--navy); font-weight: 500; }
-        .profile-contact-value a { color: var(--navy); text-decoration: none; }
-        .profile-paralegal { display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--white); border: 1px solid var(--gray-200); border-radius: 8px; }
-        .super-lawyers-badge { margin-top: 24px; }
-        .super-lawyers-badge img { height: 80px; width: auto; max-width: 200px; }
-        .paralegal-image { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
-        .paralegal-info h4 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
-        .paralegal-info p { font-size: 13px; color: var(--gray-600); }
-        .paralegal-info a { font-size: 13px; color: var(--blue-accent); text-decoration: none; }
-        .profile-content h2 { font-family: var(--serif); font-size: 28px; font-weight: 600; color: var(--navy); margin-bottom: 20px; margin-top: 40px; }
-        .profile-content h2:first-child { margin-top: 0; }
-        .profile-content p { font-size: 16px; color: var(--gray-600); line-height: 1.8; margin-bottom: 20px; }
-        .profile-content ul { list-style: none; margin-bottom: 20px; }
-        .profile-content ul li { position: relative; padding-left: 20px; margin-bottom: 12px; font-size: 15px; color: var(--gray-600); line-height: 1.6; }
-        .profile-content ul li::before { content: ''; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; background: var(--blue-accent); border-radius: 50%; }
-        .footer { background: var(--navy); padding: 80px 40px 40px; }
-        .footer-container { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; }
-        .footer-logo-img { height: 60px; width: auto; opacity: 0.6; margin-bottom: 24px; }
-        .footer-desc { font-size: 15px; color: rgba(255, 255, 255, 0.6); line-height: 1.8; }
+        :root {
+            --navy: #1a3a5c;
+            --navy-light: #2a4a6c;
+            --navy-dark: #0f2840;
+            --blue-accent: #2d7bc4;
+            --blue-light: #4a9ae0;
+            --cream: #f5f7fa;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e8e8e8;
+            --gray-600: #6b7280;
+            --serif: 'Crimson Pro', Georgia, serif;
+            --sans: 'Montserrat', -apple-system, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--white);
+            color: var(--navy);
+            line-height: 1.6;
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(10, 22, 40, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled {
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 48px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links li {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--blue-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--navy);
+            color: var(--white);
+            padding: 14px 28px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .nav-cta:hover {
+            background: var(--blue-accent);
+            color: var(--white);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            padding: 160px 40px 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--blue-light);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .page-title {
+            font-family: var(--serif);
+            font-size: clamp(42px, 5vw, 64px);
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .page-role {
+            font-size: 20px;
+            color: var(--blue-light);
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .attorney-profile {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 60px;
+        }
+
+        .profile-sidebar {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+
+        .profile-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+
+        .profile-contact {
+            background: var(--cream);
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+
+        .profile-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .profile-contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .profile-contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--blue-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-contact-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--white);
+            fill: none;
+        }
+
+        .profile-contact-info {
+            flex: 1;
+        }
+
+        .profile-contact-label {
+            font-size: 12px;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .profile-contact-value {
+            font-size: 15px;
+            color: var(--navy);
+            font-weight: 500;
+        }
+
+        .profile-contact-value a {
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .profile-contact-value a:hover {
+            color: var(--blue-accent);
+        }
+
+        .profile-paralegal {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+        }
+
+        .paralegal-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .paralegal-info h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 2px;
+        }
+
+        .paralegal-info p {
+            font-size: 13px;
+            color: var(--gray-600);
+        }
+
+        .paralegal-info a {
+            font-size: 13px;
+            color: var(--blue-accent);
+            text-decoration: none;
+        }
+
+        .profile-content h2 {
+            font-family: var(--serif);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .profile-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .profile-content p {
+            font-size: 16px;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .profile-content ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .profile-content ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .profile-content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            background: var(--blue-accent);
+            border-radius: 50%;
+        }
+
+        .super-lawyers-badge {
+            margin-top: 24px;
+        }
+
+        .super-lawyers-badge img {
+            height: 120px;
+            width: auto;
+        }
+
+        .footer {
+            background: var(--navy);
+            padding: 80px 40px 40px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+        }
+
+        .footer-brand {
+            color: var(--white);
+        }
+
+        .footer-logo {
+            margin-bottom: 24px;
+        }
+
+        .footer-logo-img {
+            height: 60px;
+            width: auto;
+            opacity: 0.6;
+        }
+
+        .footer-desc {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
 
         .footer-social {
             display: flex;
@@ -118,15 +464,73 @@
             height: 20px;
         }
 
-        .footer-title { font-size: 13px; font-weight: 600; color: var(--blue-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 15px; }
-        .footer-address { color: rgba(255, 255, 255, 0.6); font-size: 15px; line-height: 1.8; }
-        .footer-buttons { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; }
-        .footer-btn { display: inline-block; padding: 12px 24px; border: 1px solid rgba(255, 255, 255, 0.3); color: var(--white); text-decoration: none; font-size: 14px; font-weight: 500; text-align: center; }
-        .footer-bottom { max-width: 1400px; margin: 60px auto 0; padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
-                .footer-disclaimer {
+        .footer-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--blue-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-address {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .footer-buttons {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .footer-btn:hover {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 60px auto 0;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        .footer-disclaimer {
             color: rgba(255, 255, 255, 0.4);
             font-size: 13px;
             line-height: 1.8;
@@ -142,8 +546,33 @@
         .footer-disclaimer a:hover {
             color: var(--white);
         }
-        @media (max-width: 900px) { .nav-links { display: none; } .profile-grid { grid-template-columns: 1fr; } .profile-sidebar { position: static; } .footer-container { grid-template-columns: 1fr 1fr; } }
-    
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+            }
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+            .profile-sidebar {
+                position: static;
+            }
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Dropdown Menu */
         .nav-item {
             position: relative;
@@ -643,9 +1072,11 @@
     </nav>
 
     <header class="page-header">
-        <div class="page-label">Attorney Profile</div>
-        <h1 class="page-title">William D. Matthews</h1>
-        <div class="page-role">Associate</div>
+        <div class="page-header-content">
+            <div class="page-label">Attorney Profile</div>
+            <h1 class="page-title">William D. Matthews</h1>
+            <div class="page-role">Associate</div>
+        </div>
     </header>
 
     <section class="attorney-profile">
