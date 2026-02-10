@@ -45,7 +45,7 @@
         .label {
             background: var(--navy);
             color: white;
-            padding: 12px 24px;
+            padding: 14px 28px;
             font-weight: 600;
             font-size: 14px;
             text-transform: uppercase;
@@ -323,5 +323,16 @@
             Let me know which one you prefer, and I'll implement it on the homepage (and any other pages you'd like)!
         </p>
     </div>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
