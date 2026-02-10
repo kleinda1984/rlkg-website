@@ -435,10 +435,7 @@
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHTT55MS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <nav class="nav" id="nav">
         <div class="nav-container">
             <a href="../index.html" class="logo">
@@ -570,7 +567,7 @@
         </div>
     </article>
     <div class="back-to-blog"><a href="../blog.html">← Back to Blog</a></div>
-        <footer class="footer">
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
                 <img src="../images/rountree-leitman-klein-geer-white-logo.png" alt="Rountree Leitman Klein & Geer" class="footer-logo-img">
@@ -623,5 +620,16 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
