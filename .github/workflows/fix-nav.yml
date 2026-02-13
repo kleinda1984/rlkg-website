@@ -20,15 +20,24 @@ jobs:
               with open(f, "r") as fh:
                   content = fh.read()
 
-              pattern = r'(<div class="dropdown-label">Associates</div>)\s*<a href="william-matthews\.html">William D\. Matthews</a>\s*<a href="shawn-eisenberg\.html">Shawn Eisenberg</a>\s*<a href="elizabeth-childers\.html">Elizabeth Childers</a>\s*<a href="caitlyn-powers\.html">Caitlyn Powers</a>'
+              pattern = r"""(<div class=.dropdown-label.>Associates</div>)\s*<a href=.william-matthews(?:\.html)?.>William D\. Matthews</a>\s*<a href=.shawn-eisenberg(?:\.html)?.>Shawn Eisenberg</a>\s*<a href=.elizabeth-childers(?:\.html)?.>Elizabeth Childers</a>\s*<a href=.caitlyn-powers(?:\.html)?.>Caitlyn Powers</a>"""
 
-              replacement = """\1
-                            <a href="elizabeth-childers.html">Elizabeth Childers</a>
-                            <a href="caitlyn-powers.html">Caitlyn Powers</a>
-                            <a href="shawn-eisenberg.html">Shawn Eisenberg</a>
-                            <a href="william-matthews.html">William D. Matthews</a>"""
+              def replace_match(m):
+                  # detect quote style from original
+                  snippet = m.group(0)
+                  if "'" in snippet and 'href="' not in snippet:
+                      q = "'"
+                      ext = ""
+                  else:
+                      q = '"'
+                      ext = ".html"
+                  return m.group(1) + f"""
+                            <a href={q}elizabeth-childers{ext}{q}>Elizabeth Childers</a>
+                            <a href={q}caitlyn-powers{ext}{q}>Caitlyn Powers</a>
+                            <a href={q}shawn-eisenberg{ext}{q}>Shawn Eisenberg</a>
+                            <a href={q}william-matthews{ext}{q}>William D. Matthews</a>"""
 
-              new_content = re.sub(pattern, replacement, content)
+              new_content = re.sub(pattern, replace_match, content)
               if new_content != content:
                   with open(f, "w") as fh:
                       fh.write(new_content)
@@ -43,5 +52,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add -A
-          git diff --staged --quiet || git commit -m "Reorder associates in nav: Childers, Powers, Eisenberg, Matthews"
+          git diff --staged --quiet || git commit -m "Reorder associates in blog nav: Childers, Powers, Eisenberg, Matthews"
           git push
