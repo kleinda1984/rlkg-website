@@ -24,7 +24,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Publish Date", name: "date", widget: "datetime", required: true }
-      - { label: "Author", name: "author", widget: "select", options: ["William A. Rountree", "Hal J. Leitman", "David S. Klein", "Will B. Geer", "Michael J. Bargar", "Shawn M. Eisenberg", "Elizabeth F. Childers", "Caitlyn M. Powers", "William Z. Matthews", "RLKG Law"], default: "RLKG Law" }
+      - { label: "Author", name: "author", widget: "select", options: ["William A. Rountree", "Hal J. Leitman", "David S. Klein", "Will B. Geer", "Michael J. Bargar", "Shawn M. Eisenberg", "Elizabeth F. Childers", "Caitlyn Powers", "William Z. Matthews", "RLKG Law"], default: "RLKG Law" }
       - { label: "Category", name: "category", widget: "select", options: ["Bankruptcy", "Chapter 7", "Chapter 11", "Chapter 13", "Real Estate", "Litigation", "Firm News", "Consumer Protection"], required: true }
       - { label: "Description (for SEO)", name: "description", widget: "text", required: true, hint: "A brief summary for search engines (150-160 characters)" }
       - { label: "Keywords (for SEO)", name: "keywords", widget: "string", required: false, hint: "Comma-separated keywords" }
