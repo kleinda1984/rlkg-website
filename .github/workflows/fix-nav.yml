@@ -10,24 +10,36 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - name: Show current order in index.html
+        run: grep -A 6 "Associates" index.html
+
       - name: Fix associate order in all HTML files
         run: |
-          python3 -c "
-          import glob
-          old = \"<a href='/william-matthews'>William D. Matthews</a>\n                            <a href='/shawn-eisenberg'>Shawn Eisenberg</a>\n                            <a href='/elizabeth-childers'>Elizabeth Childers</a>\n                            <a href='/caitlyn-powers'>Caitlyn Powers</a>\"
-          new = \"<a href='/elizabeth-childers'>Elizabeth Childers</a>\n                            <a href='/caitlyn-powers'>Caitlyn Powers</a>\n                            <a href='/shawn-eisenberg'>Shawn Eisenberg</a>\n                            <a href='/william-matthews'>William D. Matthews</a>\"
+          python3 << 'PYEOF'
+          import glob, re
+
           count = 0
-          for f in glob.glob('**/*.html', recursive=True):
-              with open(f, 'r') as fh:
+          for f in glob.glob("**/*.html", recursive=True):
+              with open(f, "r") as fh:
                   content = fh.read()
-              if old in content:
-                  content = content.replace(old, new)
-                  with open(f, 'w') as fh:
-                      fh.write(content)
+
+              pattern = r"(<div class=\"dropdown-label\">Associates</div>)\s*<a href='/william-matthews'>William D. Matthews</a>\s*<a href='/shawn-eisenberg'>Shawn Eisenberg</a>\s*<a href='/elizabeth-childers'>Elizabeth Childers</a>\s*<a href='/caitlyn-powers'>Caitlyn Powers</a>"
+
+              replacement = r"""\1
+                            <a href='/elizabeth-childers'>Elizabeth Childers</a>
+                            <a href='/caitlyn-powers'>Caitlyn Powers</a>
+                            <a href='/shawn-eisenberg'>Shawn Eisenberg</a>
+                            <a href='/william-matthews'>William D. Matthews</a>"""
+
+              new_content = re.sub(pattern, replacement, content)
+              if new_content != content:
+                  with open(f, "w") as fh:
+                      fh.write(new_content)
                   count += 1
-                  print(f'Fixed: {f}')
-          print(f'Total files fixed: {count}')
-          "
+                  print(f"Fixed: {f}")
+
+          print(f"\nTotal files fixed: {count}")
+          PYEOF
 
       - name: Commit changes
         run: |
