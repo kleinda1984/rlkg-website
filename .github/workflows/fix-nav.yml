@@ -10,9 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Show current order in index.html
-        run: grep -A 6 "Associates" index.html
-
       - name: Fix associate order in all HTML files
         run: |
           python3 << 'PYEOF'
@@ -23,13 +20,13 @@ jobs:
               with open(f, "r") as fh:
                   content = fh.read()
 
-              pattern = r"(<div class=\"dropdown-label\">Associates</div>)\s*<a href='/william-matthews'>William D. Matthews</a>\s*<a href='/shawn-eisenberg'>Shawn Eisenberg</a>\s*<a href='/elizabeth-childers'>Elizabeth Childers</a>\s*<a href='/caitlyn-powers'>Caitlyn Powers</a>"
+              pattern = r'(<div class="dropdown-label">Associates</div>)\s*<a href="william-matthews\.html">William D\. Matthews</a>\s*<a href="shawn-eisenberg\.html">Shawn Eisenberg</a>\s*<a href="elizabeth-childers\.html">Elizabeth Childers</a>\s*<a href="caitlyn-powers\.html">Caitlyn Powers</a>'
 
-              replacement = r"""\1
-                            <a href='/elizabeth-childers'>Elizabeth Childers</a>
-                            <a href='/caitlyn-powers'>Caitlyn Powers</a>
-                            <a href='/shawn-eisenberg'>Shawn Eisenberg</a>
-                            <a href='/william-matthews'>William D. Matthews</a>"""
+              replacement = """\1
+                            <a href="elizabeth-childers.html">Elizabeth Childers</a>
+                            <a href="caitlyn-powers.html">Caitlyn Powers</a>
+                            <a href="shawn-eisenberg.html">Shawn Eisenberg</a>
+                            <a href="william-matthews.html">William D. Matthews</a>"""
 
               new_content = re.sub(pattern, replacement, content)
               if new_content != content:
