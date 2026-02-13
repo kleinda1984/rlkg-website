@@ -10,9 +10,6 @@ Sitemap: https://www.rlkglaw.com/sitemap.xml
 # RSS Feed
 # RSS: https://www.rlkglaw.com/rss.xml
 
-# Crawl-delay for polite crawling (optional)
-Crawl-delay: 1
-
 # Disallow administrative or non-public paths (none currently)
 # Disallow: /admin/
 # Disallow: /private/
