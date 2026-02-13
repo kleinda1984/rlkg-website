@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-    
+
     <!-- Main Pages -->
     <url>
         <loc>https://www.rlkglaw.com/</loc>
@@ -40,7 +40,7 @@
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
-    
+
     <!-- Attorney Profiles -->
     <url>
         <loc>https://www.rlkglaw.com/will-rountree.html</loc>
@@ -102,7 +102,7 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    
+
     <!-- Blog Posts 2026 -->
     <url>
         <loc>https://www.rlkglaw.com/blog/spring-break-vacation-bankruptcy.html</loc>
@@ -154,8 +154,18 @@
             <image:title>What Does It Mean To Have Equity?</image:title>
         </image:image>
     </url>
-    
+
     <!-- Blog Posts 2025 -->
+    <url>
+        <loc>https://www.rlkglaw.com/blog/chapter-13-bankruptcy-cost.html</loc>
+        <lastmod>2025-10-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://www.rlkglaw.com/images/og-image.png</image:loc>
+            <image:title>How Much Does Chapter 13 Bankruptcy Cost?</image:title>
+        </image:image>
+    </url>
     <url>
         <loc>https://www.rlkglaw.com/blog/bankruptcy-and-divorce.html</loc>
         <lastmod>2025-11-10</lastmod>
@@ -179,8 +189,20 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://www.rlkglaw.com/blog/best-time-file-bankruptcy.html</loc>
+        <lastmod>2025-06-14</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://www.rlkglaw.com/blog/georgia-tort-reform-2025.html</loc>
         <lastmod>2025-05-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.rlkglaw.com/blog/lower-car-payment-bankruptcy.html</loc>
+        <lastmod>2025-03-08</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -196,8 +218,32 @@
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
-    
+    <url>
+        <loc>https://www.rlkglaw.com/blog/bills-to-pay-after-bankruptcy.html</loc>
+        <lastmod>2025-01-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
     <!-- Blog Posts 2024 -->
+    <url>
+        <loc>https://www.rlkglaw.com/blog/georgia-foreclosure-process.html</loc>
+        <lastmod>2024-11-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.rlkglaw.com/blog/bankruptcy-improve-credit-score.html</loc>
+        <lastmod>2024-09-05</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.rlkglaw.com/blog/parents-guide-bankruptcy.html</loc>
+        <lastmod>2024-08-10</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
     <url>
         <loc>https://www.rlkglaw.com/blog/fifa-writ-fieri-facias.html</loc>
         <lastmod>2024-08-01</lastmod>
@@ -205,8 +251,20 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://www.rlkglaw.com/blog/credit-card-use-before-bankruptcy.html</loc>
+        <lastmod>2024-05-22</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://www.rlkglaw.com/blog/individual-chapter-11.html</loc>
         <lastmod>2024-05-14</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.rlkglaw.com/blog/common-reasons-file-bankruptcy.html</loc>
+        <lastmod>2024-03-15</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -228,7 +286,7 @@
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
-    
+
     <!-- Blog Posts 2023 -->
     <url>
         <loc>https://www.rlkglaw.com/blog/sandwich-project-2023.html</loc>
@@ -266,7 +324,7 @@
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
-    
+
     <!-- Blog Posts 2022 -->
     <url>
         <loc>https://www.rlkglaw.com/blog/business-chapter-11-questions.html</loc>
@@ -304,7 +362,7 @@
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
-    
+
     <!-- Blog Posts 2021 -->
     <url>
         <loc>https://www.rlkglaw.com/blog/keep-property-bankruptcy.html</loc>
@@ -330,70 +388,5 @@
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
-    <url>
-        <loc>https://www.rlkglaw.com/blog/common-reasons-file-bankruptcy.html</loc>
-        <lastmod>2024-03-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rlkglaw.com/blog/credit-card-use-before-bankruptcy.html</loc>
-        <lastmod>2024-05-22</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rlkglaw.com/blog/parents-guide-bankruptcy.html</loc>
-        <lastmod>2024-08-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rlkglaw.com/blog/bankruptcy-improve-credit-score.html</loc>
-        <lastmod>2024-09-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rlkglaw.com/blog/georgia-foreclosure-process.html</loc>
-        <lastmod>2024-11-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rlkglaw.com/blog/bills-to-pay-after-bankruptcy.html</loc>
-        <lastmod>2025-01-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rlkglaw.com/blog/lower-car-payment-bankruptcy.html</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rlkglaw.com/blog/best-time-file-bankruptcy.html</loc>
-        <lastmod>2025-06-14</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rlkglaw.com/blog/chapter-13-bankruptcy-cost.html</loc>
-        <lastmod>2025-10-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rlkglaw.com/blog/chapter-13-income-change.html</loc>
-        <lastmod>2026-01-14</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rlkglaw.com/blog/understanding-equity-bankruptcy.html</loc>
-        <lastmod>2026-01-14</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
+
 </urlset>
