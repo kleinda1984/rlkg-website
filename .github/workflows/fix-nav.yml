@@ -1,0 +1,38 @@
+name: Fix Associate Nav Order
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  fix-nav:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Fix associate order in all HTML files
+        run: |
+          python3 -c "
+          import glob
+          old = \"<a href='/william-matthews'>William D. Matthews</a>\n                            <a href='/shawn-eisenberg'>Shawn Eisenberg</a>\n                            <a href='/elizabeth-childers'>Elizabeth Childers</a>\n                            <a href='/caitlyn-powers'>Caitlyn Powers</a>\"
+          new = \"<a href='/elizabeth-childers'>Elizabeth Childers</a>\n                            <a href='/caitlyn-powers'>Caitlyn Powers</a>\n                            <a href='/shawn-eisenberg'>Shawn Eisenberg</a>\n                            <a href='/william-matthews'>William D. Matthews</a>\"
+          count = 0
+          for f in glob.glob('**/*.html', recursive=True):
+              with open(f, 'r') as fh:
+                  content = fh.read()
+              if old in content:
+                  content = content.replace(old, new)
+                  with open(f, 'w') as fh:
+                      fh.write(content)
+                  count += 1
+                  print(f'Fixed: {f}')
+          print(f'Total files fixed: {count}')
+          "
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Reorder associates in nav: Childers, Powers, Eisenberg, Matthews"
+          git push
