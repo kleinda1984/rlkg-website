@@ -4,6 +4,12 @@
 [build]
   publish = "."
 
+# Disable pretty URLs so Netlify doesn't auto-serve directories as pages
+# This ensures /blog redirects to /blog.html via _redirects rules
+[processing]
+  [[processing.html]]
+    pretty_urls = false
+
 # Force HTTPS and redirect non-www to www
 [[redirects]]
   from = "https://rlkglaw.com/*"
@@ -23,6 +29,19 @@
   status = 301
   force = true
 
+# Force /blog to serve /blog.html (Netlify treats /blog as a directory)
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/"
+  to = "/blog.html"
+  status = 301
+  force = true
+
 # Security Headers
 [[headers]]
   for = "/*"
@@ -32,6 +51,7 @@
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
 # Cache static assets
 [[headers]]
