@@ -9,7 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
+      - name: Show raw bytes around Associates in a blog file
+        run: grep -A 5 "Associates" blog/spring-break-vacation-bankruptcy.html | cat -A
+
       - name: Fix associate order in all HTML files
         run: |
           python3 << 'PYEOF'
@@ -20,28 +23,41 @@ jobs:
               with open(f, "r") as fh:
                   content = fh.read()
 
-              pattern = r"""(<div class=.dropdown-label.>Associates</div>)\s*<a href=.william-matthews(?:\.html)?.>William D\. Matthews</a>\s*<a href=.shawn-eisenberg(?:\.html)?.>Shawn Eisenberg</a>\s*<a href=.elizabeth-childers(?:\.html)?.>Elizabeth Childers</a>\s*<a href=.caitlyn-powers(?:\.html)?.>Caitlyn Powers</a>"""
+              pattern = r"(>Associates</div>)(.*?)(</div>\s*</div>\s*</li>)"
+              
+              def reorder(m):
+                  prefix = m.group(1)
+                  block = m.group(2)
+                  suffix = m.group(3)
+                  
+                  links = re.findall(r"<a\s+href=['\"][^'\"]*['\"]>[^<]+</a>", block)
+                  if len(links) != 4:
+                      return m.group(0)
+                  
+                  link_map = {}
+                  for link in links:
+                      name = re.search(r">([^<]+)<", link).group(1)
+                      link_map[name.split()[-1].lower()] = link
+                  
+                  desired = ["childers", "powers", "eisenberg", "matthews"]
+                  if all(k in link_map for k in desired):
+                      current = [re.search(r">([^<]+)<", l).group(1).split()[-1].lower() for l in links]
+                      if current == desired:
+                          return m.group(0)
+                      
+                      indent = "\n                            "
+                      new_block = indent + indent.join(link_map[k] for k in desired) + "\n                        "
+                      count_holder[0] += 1
+                      return prefix + new_block + suffix
+                  
+                  return m.group(0)
 
-              def replace_match(m):
-                  # detect quote style from original
-                  snippet = m.group(0)
-                  if "'" in snippet and 'href="' not in snippet:
-                      q = "'"
-                      ext = ""
-                  else:
-                      q = '"'
-                      ext = ".html"
-                  return m.group(1) + f"""
-                            <a href={q}elizabeth-childers{ext}{q}>Elizabeth Childers</a>
-                            <a href={q}caitlyn-powers{ext}{q}>Caitlyn Powers</a>
-                            <a href={q}shawn-eisenberg{ext}{q}>Shawn Eisenberg</a>
-                            <a href={q}william-matthews{ext}{q}>William D. Matthews</a>"""
-
-              new_content = re.sub(pattern, replace_match, content)
+              count_holder = [0]
+              new_content = re.sub(pattern, reorder, content, flags=re.DOTALL)
               if new_content != content:
                   with open(f, "w") as fh:
                       fh.write(new_content)
-                  count += 1
+                  count += count_holder[0]
                   print(f"Fixed: {f}")
 
           print(f"\nTotal files fixed: {count}")
@@ -50,7 +66,4 @@ jobs:
       - name: Commit changes
         run: |
           git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add -A
-          git diff --staged --quiet || git commit -m "Reorder associates in blog nav: Childers, Powers, Eisenberg, Matthews"
-          git push
+          git config user.email "github-actions
