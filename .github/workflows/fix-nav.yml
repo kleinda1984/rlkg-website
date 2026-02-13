@@ -10,60 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Show raw bytes around Associates in a blog file
-        run: grep -A 5 "Associates" blog/spring-break-vacation-bankruptcy.html | cat -A
-
-      - name: Fix associate order in all HTML files
-        run: |
-          python3 << 'PYEOF'
-          import glob, re
-
-          count = 0
-          for f in glob.glob("**/*.html", recursive=True):
-              with open(f, "r") as fh:
-                  content = fh.read()
-
-              pattern = r"(>Associates</div>)(.*?)(</div>\s*</div>\s*</li>)"
-              
-              def reorder(m):
-                  prefix = m.group(1)
-                  block = m.group(2)
-                  suffix = m.group(3)
-                  
-                  links = re.findall(r"<a\s+href=['\"][^'\"]*['\"]>[^<]+</a>", block)
-                  if len(links) != 4:
-                      return m.group(0)
-                  
-                  link_map = {}
-                  for link in links:
-                      name = re.search(r">([^<]+)<", link).group(1)
-                      link_map[name.split()[-1].lower()] = link
-                  
-                  desired = ["childers", "powers", "eisenberg", "matthews"]
-                  if all(k in link_map for k in desired):
-                      current = [re.search(r">([^<]+)<", l).group(1).split()[-1].lower() for l in links]
-                      if current == desired:
-                          return m.group(0)
-                      
-                      indent = "\n                            "
-                      new_block = indent + indent.join(link_map[k] for k in desired) + "\n                        "
-                      count_holder[0] += 1
-                      return prefix + new_block + suffix
-                  
-                  return m.group(0)
-
-              count_holder = [0]
-              new_content = re.sub(pattern, reorder, content, flags=re.DOTALL)
-              if new_content != content:
-                  with open(f, "w") as fh:
-                      fh.write(new_content)
-                  count += count_holder[0]
-                  print(f"Fixed: {f}")
-
-          print(f"\nTotal files fixed: {count}")
-          PYEOF
+      - name: Run fix script
+        run: python3 fix-blog-nav.py
 
       - name: Commit changes
         run: |
           git config user.name "github-actions"
-          git config user.email "github-actions
+          git config user.email "github-actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Reorder associates in blog nav: Childers, Powers, Eisenberg, Matthews"
+          git push
