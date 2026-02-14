@@ -200,16 +200,13 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 # ===========================================
 # PRACTICE AREA REDIRECTS
 # ===========================================
-/business-bankruptcy.html /practice-areas.html 301
-/personal-bankruptcy.html /practice-areas.html 301
-/debtor--creditor.html /practice-areas.html 301
-/litigation.html /practice-areas.html 301
-/services.html /practice-areas.html 301
 
-# [NEW] Clean URL versions of old practice area pages
-/business-bankruptcy /practice-areas.html 301
-/personal-bankruptcy /practice-areas.html 301
-/debtor--creditor /practice-areas.html 301
+# Old double-dash debtor page → new single-dash page
+/debtor--creditor.html /debtor-creditor.html 301
+/debtor--creditor /debtor-creditor.html 301
+
+# Old services page → practice areas overview
+/services.html /practice-areas.html 301
 
 
 # ===========================================
@@ -237,6 +234,12 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 /our-team                   /our-team.html         301!
 /reviews-ratings            /reviews-ratings.html  301!
 /contact                    /contact.html          301!
+
+# Practice area pages (clean URL → .html)
+/business-bankruptcy        /business-bankruptcy.html  301!
+/personal-bankruptcy        /personal-bankruptcy.html  301!
+/debtor-creditor            /debtor-creditor.html      301!
+/litigation                 /litigation.html           301!
 
 # Attorney profiles (clean URL → .html)
 /will-rountree              /will-rountree.html    301!
