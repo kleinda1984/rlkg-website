@@ -1,0 +1,67 @@
+name: Fix Homepage Practice Area Card Links
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  fix-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Debug - show current practice-card links
+        run: |
+          echo "=== Practice card links in index.html ==="
+          grep -n "practice-card\|practice-areas" index.html | head -20
+
+      - name: Fix practice area card links on homepage
+        run: |
+          python3 << 'PYEOF'
+          import re
+
+          with open("index.html", "r") as f:
+              html = f.read()
+
+          original = html
+
+          # Map practice area titles to their individual page URLs
+          replacements = {
+              "Business Bankruptcy": "business-bankruptcy.html",
+              "Personal Bankruptcy": "personal-bankruptcy.html",
+              "Debtor / Creditor": "debtor-creditor.html",
+              "Litigation": "litigation.html",
+          }
+
+          for title, url in replacements.items():
+              # Match <a href="practice-areas.html" ...> or <a href="practice-areas" ...>
+              # followed eventually by the specific title text
+              pattern = r'(<a\s+href=["\'])practice-areas(?:\.html)?(["\'][\s\S]*?' + re.escape(title) + r')'
+              replacement = r'\g<1>' + url + r'\2'
+              new_html = re.sub(pattern, replacement, html, count=1)
+              if new_html != html:
+                  print(f"Updated: {title} -> {url}")
+                  html = new_html
+              else:
+                  print(f"No match for: {title}")
+
+          if html != original:
+              with open("index.html", "w") as f:
+                  f.write(html)
+              print(f"\nHomepage updated successfully")
+          else:
+              print("\nNo changes made")
+
+          PYEOF
+
+      - name: Show changes
+        run: git diff
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Update homepage practice area cards to link to individual pages"
+          git pull --rebase
+          git push
