@@ -1,25 +1,17 @@
 """
 Update footer Practice Area links on all pages to point to individual
 practice area pages instead of /practice-areas.
-
-Run via GitHub Actions workflow.
 """
 import os
+import re
 import glob
 
-old_links = [
-    "<li><a href='/practice-areas'>Business Bankruptcy</a></li>",
-    "<li><a href='/practice-areas'>Personal Bankruptcy</a></li>",
-    "<li><a href='/practice-areas'>Debtor / Creditor</a></li>",
-    "<li><a href='/practice-areas'>Litigation</a></li>",
+replacements = [
+    ("Business Bankruptcy", "/business-bankruptcy"),
+    ("Personal Bankruptcy", "/personal-bankruptcy"),
+    ("Debtor / Creditor", "/debtor-creditor"),
+    ("Litigation", "/litigation"),
 ]
-
-new_links = {
-    "<li><a href='/practice-areas'>Business Bankruptcy</a></li>": "<li><a href='/business-bankruptcy'>Business Bankruptcy</a></li>",
-    "<li><a href='/practice-areas'>Personal Bankruptcy</a></li>": "<li><a href='/personal-bankruptcy'>Personal Bankruptcy</a></li>",
-    "<li><a href='/practice-areas'>Debtor / Creditor</a></li>": "<li><a href='/debtor-creditor'>Debtor &amp; Creditor Rights</a></li>",
-    "<li><a href='/practice-areas'>Litigation</a></li>": "<li><a href='/litigation'>Litigation</a></li>",
-}
 
 fixed = 0
 skipped = 0
@@ -33,9 +25,12 @@ for fpath in all_files:
         content = f.read()
 
     changed = False
-    for old, new in new_links.items():
-        if old in content:
-            content = content.replace(old, new)
+    for label, new_href in replacements:
+        pattern = r"""<a\s+href=["']/practice-areas["']>\s*""" + re.escape(label) + r"""\s*</a>"""
+        replacement = f'<a href="{new_href}">{label}</a>'
+        new_content = re.sub(pattern, replacement, content)
+        if new_content != content:
+            content = new_content
             changed = True
 
     if changed:
