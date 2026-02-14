@@ -10,8 +10,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run footer link fix script
-        run: python3 fix-footer-links.py
+      - name: Fix footer links
+        run: |
+          find . -name "*.html" | while read f; do
+            sed -i "s|/practice-areas'>Business Bankruptcy|/business-bankruptcy'>Business Bankruptcy|g" "$f"
+            sed -i "s|/practice-areas\">Business Bankruptcy|/business-bankruptcy\">Business Bankruptcy|g" "$f"
+            sed -i "s|/practice-areas'>Personal Bankruptcy|/personal-bankruptcy'>Personal Bankruptcy|g" "$f"
+            sed -i "s|/practice-areas\">Personal Bankruptcy|/personal-bankruptcy\">Personal Bankruptcy|g" "$f"
+            sed -i "s|/practice-areas'>Debtor / Creditor|/debtor-creditor'>Debtor \&amp; Creditor Rights|g" "$f"
+            sed -i "s|/practice-areas\">Debtor / Creditor|/debtor-creditor\">Debtor \&amp; Creditor Rights|g" "$f"
+            sed -i "s|/practice-areas'>Litigation</a>|/litigation'>Litigation</a>|g" "$f"
+            sed -i "s|/practice-areas\">Litigation</a>|/litigation\">Litigation</a>|g" "$f"
+          done
+          echo "Done"
 
       - name: Commit changes
         run: |
