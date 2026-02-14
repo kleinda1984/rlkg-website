@@ -1,0 +1,28 @@
+name: Update Footer Practice Area Links
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  fix-footer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fix footer links
+        run: |
+          find . -name "*.html" -exec sed -i "s|/practice-areas\x27>Business Bankruptcy|/business-bankruptcy\x27>Business Bankruptcy|g" {} +
+          find . -name "*.html" -exec sed -i "s|/practice-areas\x27>Personal Bankruptcy|/personal-bankruptcy\x27>Personal Bankruptcy|g" {} +
+          find . -name "*.html" -exec sed -i "s|/practice-areas\x27>Debtor / Creditor|/debtor-creditor\x27>Debtor \&amp; Creditor Rights|g" {} +
+          find . -name "*.html" -exec sed -i "s|/practice-areas\x27>Litigation</a>|/litigation\x27>Litigation</a>|g" {} +
+          echo "Done"
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Update footer practice area links to individual pages"
+          git pull --rebase
+          git push
