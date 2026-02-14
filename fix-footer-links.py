@@ -1,44 +1,42 @@
 """
-Update footer Practice Area links on all pages to point to individual
-practice area pages instead of /practice-areas.
+Update footer Practice Area links on all pages.
 """
 import os
-import re
 import glob
-
-replacements = [
-    ("Business Bankruptcy", "/business-bankruptcy"),
-    ("Personal Bankruptcy", "/personal-bankruptcy"),
-    ("Debtor / Creditor", "/debtor-creditor"),
-    ("Litigation", "/litigation"),
-]
-
-fixed = 0
-skipped = 0
 
 print(f"Working directory: {os.getcwd()}")
 all_files = glob.glob('*.html') + glob.glob('blog/*.html')
 print(f"Found {len(all_files)} HTML files")
 
+# Debug: show what's actually in the first file
+with open(all_files[0], 'r', encoding='utf-8') as f:
+    text = f.read()
+idx = text.find('practice-areas')
+if idx >= 0:
+    print(f"DEBUG sample from {all_files[0]}:")
+    print(repr(text[idx-20:idx+40]))
+else:
+    print(f"DEBUG: 'practice-areas' not found in {all_files[0]}")
+
+fixed = 0
 for fpath in all_files:
     with open(fpath, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    changed = False
-    for label, new_href in replacements:
-        pattern = r"""<a\s+href=["']/practice-areas["']>\s*""" + re.escape(label) + r"""\s*</a>"""
-        replacement = f'<a href="{new_href}">{label}</a>'
-        new_content = re.sub(pattern, replacement, content)
-        if new_content != content:
-            content = new_content
-            changed = True
+    original = content
+    content = content.replace("/practice-areas'>Business Bankruptcy</a>", "/business-bankruptcy'>Business Bankruptcy</a>")
+    content = content.replace("/practice-areas'>Personal Bankruptcy</a>", "/personal-bankruptcy'>Personal Bankruptcy</a>")
+    content = content.replace("/practice-areas'>Debtor / Creditor</a>", "/debtor-creditor'>Debtor &amp; Creditor Rights</a>")
+    content = content.replace("/practice-areas'>Litigation</a>", "/litigation'>Litigation</a>")
+    content = content.replace('/practice-areas">Business Bankruptcy</a>', '/business-bankruptcy">Business Bankruptcy</a>')
+    content = content.replace('/practice-areas">Personal Bankruptcy</a>', '/personal-bankruptcy">Personal Bankruptcy</a>')
+    content = content.replace('/practice-areas">Debtor / Creditor</a>', '/debtor-creditor">Debtor &amp; Creditor Rights</a>')
+    content = content.replace('/practice-areas">Litigation</a>', '/litigation">Litigation</a>')
 
-    if changed:
+    if content != original:
         with open(fpath, 'w', encoding='utf-8') as f:
             f.write(content)
         fixed += 1
         print(f"  Fixed: {fpath}")
-    else:
-        skipped += 1
 
-print(f"\nDone: {fixed} files updated, {skipped} files skipped.")
+print(f"\nDone: {fixed} files updated, {len(all_files) - fixed} skipped.")
