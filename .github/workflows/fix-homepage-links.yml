@@ -1,0 +1,85 @@
+name: Fix Homepage Practice Area Card Links
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  fix-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Debug - show current card links
+        run: |
+          echo "=== All practice-card and practice-areas refs ==="
+          grep -n "practice-card\|practice-areas\|business-bankruptcy\|personal-bankruptcy\|debtor-creditor\|litigation" index.html | head -40
+
+      - name: Fix practice area card links on homepage
+        run: |
+          python3 << 'PYEOF'
+          import re
+
+          with open("index.html", "r") as f:
+              html = f.read()
+
+          original = html
+          count = 0
+
+          # Map practice area titles to their correct page URLs
+          replacements = {
+              "Business Bankruptcy": "business-bankruptcy.html",
+              "Personal Bankruptcy": "personal-bankruptcy.html",
+              "Debtor / Creditor": "debtor-creditor.html",
+              "Litigation": "litigation.html",
+          }
+
+          for title, url in replacements.items():
+              # Match any <a href="ANYTHING" class="practice-card"> followed by this title
+              # This handles both the original practice-areas.html AND
+              # the incorrectly shifted URLs from the previous run
+              pattern = (
+                  r'(<a\s+href=["\'])'            # group 1: <a href="
+                  r'[^"\']*'                       # any current href value
+                  r'(["\']\s+class=["\']practice-card["\'])'  # group 2: " class="practice-card"
+                  r'([\s\S]*?'                     # group 3: everything up to...
+                  + re.escape(title) +             # the specific title
+                  r')'
+              )
+              replacement = r'\g<1>' + url + r'\2\3'
+              new_html = re.sub(pattern, replacement, html, count=1)
+              if new_html != html:
+                  print(f"Updated: {title} -> {url}")
+                  html = new_html
+                  count += 1
+              else:
+                  print(f"No match for: {title}")
+
+          # Fix the nav link if the previous run changed it
+          # The nav "Practice Areas" link should point to practice-areas.html
+          html = re.sub(
+              r'(<a\s+href=["\'])business-bankruptcy\.html(["\'][^>]*>Practice Areas<)',
+              r'\g<1>practice-areas.html\2',
+              html
+          )
+
+          if html != original:
+              with open("index.html", "w") as f:
+                  f.write(html)
+              print(f"\n{count} cards updated on homepage")
+          else:
+              print("\nNo changes made")
+
+          PYEOF
+
+      - name: Show changes
+        run: git diff
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Fix homepage practice area cards to link to individual pages"
+          git pull --rebase
+          git push
