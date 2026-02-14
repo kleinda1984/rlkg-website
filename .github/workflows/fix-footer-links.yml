@@ -1,0 +1,22 @@
+name: Update Footer Practice Area Links
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  fix-footer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run footer link fix script
+        run: python3 fix-footer-links.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Update footer practice area links to individual pages"
+          git push
