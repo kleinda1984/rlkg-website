@@ -1,0 +1,87 @@
+name: Fix Practice Areas Page Card Links
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  fix-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Add links to practice area cards
+        run: |
+          python3 << 'PYEOF'
+          import re
+
+          with open("practice-areas.html", "r") as f:
+              html = f.read()
+
+          original = html
+
+          # Map card titles to their individual page URLs
+          card_map = {
+              "Business Bankruptcy": "business-bankruptcy.html",
+              "Personal Bankruptcy": "personal-bankruptcy.html",
+              "Debtor / Creditor": "debtor-creditor.html",
+              "Litigation": "litigation.html",
+          }
+
+          for title, url in card_map.items():
+              # Replace <div class="practice-card"> that contains this title
+              # with <a href="url" class="practice-card" style="text-decoration:none;color:inherit;display:block;">
+              # and close with </a> instead of </div>
+
+              # Find the complete card block for this title
+              pattern = (
+                  r'<div class="practice-card">'
+                  r'([\s\S]*?'
+                  + re.escape(title)
+                  + r'[\s\S]*?)'
+                  r'</div>\s*(?=\s*<(?:div class="practice-card">|</div>))'
+              )
+
+              match = re.search(pattern, html)
+              if match:
+                  old_block = match.group(0)
+                  new_block = old_block.replace(
+                      '<div class="practice-card">',
+                      f'<a href="{url}" class="practice-card" style="text-decoration:none;color:inherit;display:block;">',
+                      1
+                  )
+                  # Replace the last </div> of this block with </a>
+                  # Find the last </div> in the block
+                  last_div_pos = new_block.rfind('</div>')
+                  if last_div_pos != -1:
+                      new_block = new_block[:last_div_pos] + '</a>' + new_block[last_div_pos + 6:]
+
+                  html = html.replace(old_block, new_block, 1)
+                  print(f"Linked: {title} -> {url}")
+              else:
+                  print(f"No match for: {title}")
+
+          if html != original:
+              with open("practice-areas.html", "w") as f:
+                  f.write(html)
+              print("\nPractice areas page updated successfully")
+          else:
+              print("\nNo changes made")
+
+          PYEOF
+
+      - name: Debug - verify changes
+        run: |
+          grep -n "practice-card" practice-areas.html | grep -v "\.practice-card"
+
+      - name: Show changes
+        run: git diff --stat
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Add links to practice area cards on practice-areas page"
+          git pull --rebase
+          git push
