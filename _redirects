@@ -236,6 +236,7 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 /contact                    /contact.html          301!
 
 # Practice area pages (clean URL → .html)
+/sms-consent                /sms-consent.html 301!
 /business-bankruptcy        /business-bankruptcy.html  301!
 /personal-bankruptcy        /personal-bankruptcy.html  301!
 /debtor-creditor            /debtor-creditor.html      301!
