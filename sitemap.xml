@@ -24,7 +24,7 @@
     </url>
     <url>
         <loc>https://www.rlkglaw.com/blog.html</loc>
-        <lastmod>2026-02-17</lastmod>
+        <lastmod>2026-02-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -104,6 +104,16 @@
     </url>
     
     <!-- Blog Posts 2026 -->
+    <url>
+        <loc>https://www.rlkglaw.com/blog/real-estate-fraud-misrepresentation-georgia.html</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://www.rlkglaw.com/images/og-image.png</image:loc>
+            <image:title>Real Estate Fraud and Misrepresentation in Georgia: What Buyers and Sellers Need to Know</image:title>
+        </image:image>
+    </url>
     <url>
         <loc>https://www.rlkglaw.com/blog/super-lawyers-2026.html</loc>
         <lastmod>2026-02-17</lastmod>
