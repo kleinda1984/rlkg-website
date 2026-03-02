@@ -1,0 +1,27 @@
+name: Update Nav Dropdowns - Add Jonathan Clements
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-nav:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run nav dropdown update script
+        run: python3 update_all_nav_dropdowns.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Add Jonathan Clements to nav dropdowns across all pages"
+          git push
