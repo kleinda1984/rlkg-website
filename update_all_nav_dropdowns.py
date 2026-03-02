@@ -1,46 +1,60 @@
 #!/usr/bin/env python3
 """
 Update all site pages to add Jonathan Clements to the Our Team dropdown menu.
+Uses regex to handle all formatting variations across pages.
 
-Usage: Place this script in the root of your website repo and run:
-    python3 update_all_nav_dropdowns.py
-
-It will find all .html files and add Jonathan Clements to the Associates 
-dropdown section (after William D. Matthews).
+Usage: python3 update_all_nav_dropdowns.py
 """
 
 import os
+import re
 import glob
 
-# The line to find (last associate currently in dropdown)
-FIND_LINE = "<a href='/william-matthews'>William D. Matthews</a>"
-
-# What to replace it with (same line + new entry)
-REPLACE_WITH = """<a href='/william-matthews'>William D. Matthews</a>
-                  <a href='/jonathan-clements'>Jonathan Clements</a>"""
-
-# Skip files that have already been updated
 SKIP_CHECK = "jonathan-clements"
+JONATHAN_LINK = "<a href='/jonathan-clements'>Jonathan Clements</a>"
 
 def update_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
-    
-    # Skip if already updated
-    if SKIP_CHECK in content and 'jonathan-clements.html' not in filepath:
-        print(f"  SKIPPED (already updated): {filepath}")
-        return False
     
     # Skip Jonathan's own page
     if filepath.endswith('jonathan-clements.html'):
         print(f"  SKIPPED (Jonathan's own page): {filepath}")
         return False
     
-    if FIND_LINE not in content:
-        print(f"  SKIPPED (no matching nav found): {filepath}")
+    # Skip if already updated
+    if SKIP_CHECK in content:
+        print(f"  SKIPPED (already updated): {filepath}")
         return False
     
-    new_content = content.replace(FIND_LINE, REPLACE_WITH)
+    # Strategy: Find the Associates dropdown section using regex.
+    # Match the Associates label, then all associate links, then the closing </div>.
+    # Insert Jonathan's link just before the closing </div>.
+    pattern = re.compile(
+        r'(<div\s+class="dropdown-label">Associates</div>\s*'
+        r'(?:\s*<a\s+href=\'[^\']+\'>[^<]+</a>\s*)+)'
+        r'(\s*</div>)',
+        re.DOTALL
+    )
+    
+    match = pattern.search(content)
+    if not match:
+        print(f"  SKIPPED (no Associates dropdown found): {filepath}")
+        return False
+    
+    # Figure out the indentation used by existing links
+    associates_block = match.group(1)
+    link_pattern = re.compile(r'^(\s*)<a\s+href=', re.MULTILINE)
+    link_matches = list(link_pattern.finditer(associates_block))
+    
+    if link_matches:
+        indent = link_matches[-1].group(1)
+    else:
+        indent = "                  "
+    
+    # Insert Jonathan's link after the last associate link
+    new_link = f"\n{indent}{JONATHAN_LINK}"
+    new_content = content[:match.end(1)] + new_link + content[match.start(2):]
     
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(new_content)
@@ -49,7 +63,6 @@ def update_file(filepath):
     return True
 
 def main():
-    # Find all HTML files in current directory and subdirectories
     html_files = glob.glob('**/*.html', recursive=True)
     
     if not html_files:
