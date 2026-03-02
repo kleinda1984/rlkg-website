@@ -18,7 +18,7 @@
     </url>
     <url>
         <loc>https://www.rlkglaw.com/our-team.html</loc>
-        <lastmod>2025-09-01</lastmod>
+        <lastmod>2026-03-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -99,6 +99,12 @@
     <url>
         <loc>https://www.rlkglaw.com/caitlyn-powers.html</loc>
         <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.rlkglaw.com/jonathan-clements.html</loc>
+        <lastmod>2026-03-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
