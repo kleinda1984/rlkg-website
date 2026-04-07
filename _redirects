@@ -174,7 +174,7 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 /michael-j-bargar.html /mike-bargar.html 301
 /michael-bargar.html /mike-bargar.html 301
 /elizabeth-a-childers.html /elizabeth-childers.html 301
-/william-d-matthews.html /william-matthews.html 301
+/william-d-matthews.html /our-team.html 301
 /shawn-j-eisenberg.html /shawn-eisenberg.html 301
 /caitlyn-m-powers.html /caitlyn-powers.html 301
 
@@ -186,7 +186,7 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 /michael-j-bargar /mike-bargar.html 301
 /michael-bargar /mike-bargar.html 301
 /elizabeth-a-childers /elizabeth-childers.html 301
-/william-d-matthews /william-matthews.html 301
+/william-d-matthews /our-team.html 301
 /shawn-j-eisenberg /shawn-eisenberg.html 301
 /caitlyn-m-powers /caitlyn-powers.html 301
 
@@ -249,7 +249,7 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 /will-geer                  /will-geer.html        301!
 /mike-bargar                /mike-bargar.html      301!
 /ceci-christy               /ceci-christy.html     301!
-/william-matthews           /william-matthews.html  301!
+/william-matthews /our-team.html 301!
 /shawn-eisenberg            /shawn-eisenberg.html  301!
 /elizabeth-childers         /elizabeth-childers.html 301!
 /caitlyn-powers             /caitlyn-powers.html   301!
