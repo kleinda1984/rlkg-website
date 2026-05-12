@@ -43,6 +43,7 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 /blog/rlkg-recognized-for-back-to-school-contribution /blog/back-to-school-contribution.html 301
 /blog/buying-a-home-after-bankruptcy-in-georgia /blog/buying-home-after-bankruptcy.html 301
 /blog/georgia-enacts-sweeping-tort-reform-in-2025 /blog/georgia-tort-reform-2025.html 301
+/blog/georgia-enacts-sweeping-tort-reform-* /blog/georgia-tort-reform-2025.html 301
 /blog/david-s-klein-speaks-on-forms-of-title-litigation /blog/david-klein-title-litigation.html 301
 /blog/rountree-leitman-klein-geer-llc-attorneys-receive-super-lawyers-honors-for-2025 /blog/super-lawyers-2025.html 301
 
@@ -253,3 +254,11 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 /shawn-eisenberg            /shawn-eisenberg.html  301!
 /elizabeth-childers         /elizabeth-childers.html 301!
 /caitlyn-powers             /caitlyn-powers.html   301!
+
+
+# ===========================================
+# LEGACY WEEBLY ASSETS
+# Old /uploads/<digits>/.../ paths from the
+# pre-migration Weebly site
+# ===========================================
+/uploads/1/4/0/0/140022188/published/rountree-leitman-klein-geer-logo-crop.png /images/logo-transparent.png 301
