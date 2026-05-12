@@ -5,13 +5,22 @@
     <link>https://www.rlkglaw.com/blog.html</link>
     <description>Expert legal insights on bankruptcy, litigation, real estate law, and creditor rights from Atlanta's trusted attorneys.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Mar 2026 09:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 09:00:00 -0400</lastBuildDate>
     <atom:link href="https://www.rlkglaw.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://www.rlkglaw.com/images/logo-transparent.png</url>
       <title>Rountree Leitman Klein &amp; Geer, LLC Blog</title>
       <link>https://www.rlkglaw.com/blog.html</link>
     </image>
+
+        <item>
+            <title>HB 1185: Delaware-Style Reform for Georgia Corporate Litigation</title>
+            <link>https://www.rlkglaw.com/blog/hb-1185-georgia-corporate-litigation.html</link>
+            <description>Governor Kemp signed HB 1185 on May 11, 2026, bringing Delaware-style reforms to Georgia corporate litigation, including forum-selection clauses for articles and bylaws, anti-strike-suit protections, and procedural changes that route internal entity disputes to the Georgia State-wide Business Court. Effective July 1, 2026.</description>
+            <pubDate>Tue, 12 May 2026 09:00:00 -0400</pubDate>
+            <guid>https://www.rlkglaw.com/blog/hb-1185-georgia-corporate-litigation.html</guid>
+            <category>Litigation</category>
+        </item>
 
         <item>
             <title>Can I Keep My Tax Refund If I File for Bankruptcy?</title>

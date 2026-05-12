@@ -105,6 +105,16 @@
     
     <!-- Blog Posts 2026 -->
     <url>
+        <loc>https://www.rlkglaw.com/blog/hb-1185-georgia-corporate-litigation.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://www.rlkglaw.com/images/og-image.png</image:loc>
+            <image:title>HB 1185: Delaware-Style Reform for Georgia Corporate Litigation</image:title>
+        </image:image>
+    </url>
+    <url>
         <loc>https://www.rlkglaw.com/blog/real-estate-fraud-misrepresentation-georgia.html</loc>
         <lastmod>2026-02-26</lastmod>
         <changefreq>yearly</changefreq>
