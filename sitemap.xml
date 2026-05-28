@@ -432,4 +432,10 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://www.rlkglaw.com/blog/georgia-homestead-exemption-hb-1024.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
