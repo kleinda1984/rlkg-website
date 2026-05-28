@@ -88,6 +88,9 @@
         .profile-content ul { list-style: none; margin-bottom: 20px; }
         .profile-content ul li { position: relative; padding-left: 20px; margin-bottom: 12px; font-size: 15px; color: var(--gray-600); line-height: 1.6; }
         .profile-content ul li::before { content: ''; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; background: var(--blue-accent); border-radius: 50%; }
+        .profile-content ul ul.nested { margin-top: 12px; margin-bottom: 0; padding-left: 24px; }
+        .profile-content ul ul.nested li { margin-bottom: 12px; }
+        .profile-content ul ul.nested li:last-child { margin-bottom: 0; }
         .footer { background: var(--navy); padding: 80px 40px 40px; }
         .footer-container { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; }
         .footer-logo-img { height: 60px; width: auto; opacity: 0.6; margin-bottom: 24px; }
@@ -718,10 +721,13 @@
 
                 <h2>Education</h2>
                 <ul>
-                    <li>Emory University School of Law, Juris Doctor, May 2025</li>
-                    <li><em>Emory Law Journal</em>, Symposium Editor and Staff Editor</li>
-                    <li>Transactional Law Certificate, Emory University School of Law</li>
-                    <li>Teaching Assistant, Federal Income Tax, Emory University School of Law</li>
+                    <li>Emory University School of Law, Juris Doctor, May 2025
+                        <ul class="nested">
+                            <li><em>Emory Law Journal</em>, Symposium Editor and Staff Editor</li>
+                            <li>Transactional Law Certificate</li>
+                            <li>Teaching Assistant, Federal Income Tax</li>
+                        </ul>
+                    </li>
                     <li>University of Washington, Bachelor of Arts in Political Science (Political Economy focus), 2021</li>
                 </ul>
             </div>
