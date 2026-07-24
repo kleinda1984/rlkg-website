@@ -1,0 +1,15 @@
+RLKG blog post: "Will Geer Speaks on Streamlining Small Business Cases at ABI's 2026
+Southeast Bankruptcy Workshop"  (July 24, 2026)
+
+Upload these files to the rlkg-website repo, preserving this folder structure:
+
+  blog/will-geer-abi-panel-2026.html      (new post)
+  blog.html                               (replaces existing - adds card + JSON-LD entry)
+  sitemap.xml                             (replaces existing - adds URL entry)
+  rss.xml                                 (replaces existing - adds item + new lastBuildDate)
+  images/will-geer-abi-panel-2026.jpg     (new - on-page featured banner, 1600x512)
+  images/will-geer-abi-panel-2026-og.jpg  (new - social/OG card, 1200x630)
+  images/abi-logo.png                     (new - ABI teal badge)
+
+The RSS item + updated lastBuildDate are what trigger your Facebook/LinkedIn
+auto-poster to pick up the new post once these files are live.
