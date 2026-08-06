@@ -5,13 +5,22 @@
     <link>https://www.rlkglaw.com/blog.html</link>
     <description>Expert legal insights on bankruptcy, litigation, real estate law, and creditor rights from Atlanta's trusted attorneys.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Jul 2026 09:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 09:00:00 -0400</lastBuildDate>
     <atom:link href="https://www.rlkglaw.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://www.rlkglaw.com/images/logo-transparent.png</url>
       <title>Rountree Leitman Klein &amp; Geer, LLC Blog</title>
       <link>https://www.rlkglaw.com/blog.html</link>
     </image>
+
+        <item>
+            <title>What Is an Adversary Proceeding in Bankruptcy?</title>
+            <link>https://www.rlkglaw.com/blog/adversary-proceeding-bankruptcy.html</link>
+            <description>Some bankruptcy disputes are too significant for motion practice and must be litigated as a separate lawsuit inside the bankruptcy case. Learn the common claims, critical deadlines, and how adversary proceedings work in Georgia bankruptcy courts.</description>
+            <pubDate>Thu, 06 Aug 2026 09:00:00 -0400</pubDate>
+            <guid>https://www.rlkglaw.com/blog/adversary-proceeding-bankruptcy.html</guid>
+            <category>Bankruptcy</category>
+        </item>
 
         <item>
             <title>Will Geer Speaks on Streamlining Small Business Cases at ABI's 2026 Southeast Bankruptcy Workshop</title>

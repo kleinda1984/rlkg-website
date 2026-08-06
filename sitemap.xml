@@ -111,6 +111,12 @@
     
     <!-- Blog Posts 2026 -->
     <url>
+        <loc>https://www.rlkglaw.com/blog/adversary-proceeding-bankruptcy.html</loc>
+        <lastmod>2026-08-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.rlkglaw.com/blog/will-geer-abi-panel-2026.html</loc>
         <lastmod>2026-07-24</lastmod>
         <changefreq>yearly</changefreq>
