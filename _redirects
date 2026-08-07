@@ -262,3 +262,5 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 # pre-migration Weebly site
 # ===========================================
 /uploads/1/4/0/0/140022188/published/rountree-leitman-klein-geer-logo-crop.png /images/logo-transparent.png 301
+/blog/adversary-proceeding-bankruptcy /blog/adversary-proceeding-bankruptcy.html 301
+/index.html / 301!

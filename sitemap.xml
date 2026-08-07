@@ -109,6 +109,31 @@
         <priority>0.7</priority>
     </url>
     
+    <url>
+        <loc>https://www.rlkglaw.com/business-bankruptcy.html</loc>
+        <lastmod>2026-08-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.rlkglaw.com/personal-bankruptcy.html</loc>
+        <lastmod>2026-08-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.rlkglaw.com/debtor-creditor.html</loc>
+        <lastmod>2026-08-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.rlkglaw.com/litigation.html</loc>
+        <lastmod>2026-08-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
     <!-- Blog Posts 2026 -->
     <url>
         <loc>https://www.rlkglaw.com/blog/adversary-proceeding-bankruptcy.html</loc>
