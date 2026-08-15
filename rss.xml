@@ -5,13 +5,22 @@
     <link>https://www.rlkglaw.com/blog.html</link>
     <description>Expert legal insights on bankruptcy, litigation, real estate law, and creditor rights from Atlanta's trusted attorneys.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Aug 2026 09:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 09:00:00 -0400</lastBuildDate>
     <atom:link href="https://www.rlkglaw.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://www.rlkglaw.com/images/logo-transparent.png</url>
       <title>Rountree Leitman Klein &amp; Geer, LLC Blog</title>
       <link>https://www.rlkglaw.com/blog.html</link>
     </image>
+
+        <item>
+            <title>Tuition Clawback in Bankruptcy: What Georgia Parents Should Know</title>
+            <link>https://www.rlkglaw.com/blog/tuition-clawback-bankruptcy.html</link>
+            <description>Back-to-school season means big tuition checks. If a Georgia parent later files bankruptcy, a trustee can try to claw those payments back from the college as constructively fraudulent transfers under Section 548 and the Georgia UVTA. Here's how In re Palladino, the 11th Circuit's silence, and the four-year Georgia lookback all fit together — plus practical steps to reduce clawback exposure.</description>
+            <pubDate>Sat, 15 Aug 2026 09:00:00 -0400</pubDate>
+            <guid>https://www.rlkglaw.com/blog/tuition-clawback-bankruptcy.html</guid>
+            <category>Bankruptcy</category>
+        </item>
 
         <item>
             <title>What Is an Adversary Proceeding in Bankruptcy?</title>
@@ -29,6 +38,15 @@
             <pubDate>Fri, 24 Jul 2026 09:00:00 -0400</pubDate>
             <guid>https://www.rlkglaw.com/blog/will-geer-abi-panel-2026.html</guid>
             <category>Firm News</category>
+        </item>
+
+        <item>
+            <title>When Asset Transfers Aren't Final: A Georgia Uniform Voidable Transactions Act Update</title>
+            <link>https://www.rlkglaw.com/blog/georgia-uvta-fraudulent-transfers.html</link>
+            <description>Recent Georgia Court of Appeals decisions in Pirs Capital v. Vivace Design Build and Barnes v. Tillery sharpen the rules for unwinding fraudulent transfers under the Georgia UVTA — from what counts as an "asset" and when successor liability attaches, to the hard four-year bar that just extinguished a creditor's claim. Plus the bankruptcy trustee's expanded reach under 11 U.S.C. Section 544(b).</description>
+            <pubDate>Thu, 16 Jul 2026 09:00:00 -0400</pubDate>
+            <guid>https://www.rlkglaw.com/blog/georgia-uvta-fraudulent-transfers.html</guid>
+            <category>Litigation</category>
         </item>
 
         <item>
