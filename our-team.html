@@ -292,6 +292,11 @@
             max-width: 1400px;
         }
 
+        .team-grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 600px;
+        }
+
         .team-grid-centered {
             display: flex;
             justify-content: center;
@@ -570,7 +575,8 @@
         @media (max-width: 600px) {
             .team-grid,
             .team-grid-5,
-            .team-grid-3 {
+            .team-grid-3,
+            .team-grid-2 {
                 grid-template-columns: 1fr;
                 max-width: 300px;
             }
@@ -1237,19 +1243,12 @@
             <div class="team-section-label">Administration</div>
             <h2 class="team-section-title">Legal Assistants & Staff</h2>
         </div>
-        <div class="team-grid team-grid-3">
+        <div class="team-grid team-grid-2">
             <a href="mailto:cwilliams@rlkglaw.com" class="team-card">
                 <div class="team-image">
                     <img src="images/cat-williams-profile.png" alt="Cat Williams">
                 </div>
                 <h3 class="team-name">Cat Williams</h3>
-                <div class="team-role">Legal Assistant</div>
-            </a>
-            <a href="mailto:rjones@rlkglaw.com" class="team-card">
-                <div class="team-image">
-                    <img src="images/blank-profile-picture.png" alt="Ryley Jones">
-                </div>
-                <h3 class="team-name">Ryley Jones</h3>
                 <div class="team-role">Legal Assistant</div>
             </a>
             <a href="mailto:csmith@rlkglaw.com" class="team-card">
