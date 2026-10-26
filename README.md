@@ -1,59 +1,23 @@
-# RLKG Law Website with Decap CMS
+# RLKG Law Website
 
-This website includes Decap CMS (formerly Netlify CMS) for managing blog posts.
+Static site for Rountree Leitman Klein & Geer, LLC (https://www.rlkglaw.com), deployed by Netlify from the `main` branch of this repository. There is no build step: the HTML files in the repo are served as-is.
 
-## How to Access the Admin Panel
+## Layout
 
-1. Go to: `https://www.rlkglaw.com/admin/`
-2. Click "Login with Netlify Identity"
-3. Enter your email and password
-4. You'll be taken to the content management dashboard
+- Root `*.html` pages: homepage, practice areas, attorney profiles, team, reviews, contact
+- `blog/*.html`: one file per post; `blog.html` is the index
+- `images/`: site images; attorney headshots are `images/{first}-{last}-profile.png` at 600x600
+- `_redirects`: legacy Weebly slugs, canonicalization, and extensionless-to-.html rules
+- `netlify.toml`: HTTPS/www redirects and cache/security headers
+- `sitemap.xml`, `rss.xml`, `robots.txt`
 
-## How to Create a New Blog Post
+## Publishing a blog post
 
-1. Log into the admin panel at `/admin/`
-2. Click "Blog Posts" in the sidebar
-3. Click "New Blog Post"
-4. Fill in the fields:
-   - **Title**: The headline of your post
-   - **Publish Date**: When the post should go live
-   - **Author**: Select from the dropdown
-   - **Category**: Choose the most relevant category
-   - **Description**: Brief summary for search engines (150-160 characters)
-   - **Keywords**: Comma-separated keywords for SEO
-   - **Featured Image**: Optional image for the post
-   - **Read Time**: Estimated minutes to read
-   - **Body**: Write your post content in the editor
-   - **Related Posts**: Optionally link to up to 3 related articles
-5. Click "Save" to save as draft, or "Publish" when ready
+1. Add `blog/<slug>.html` (copy a recent post as the template; blog pages link to root pages with a `../` prefix).
+2. Add the card and the `BlogPosting` entry in `blog.html`.
+3. Add the URL to `sitemap.xml` and the item to `rss.xml` (bump `lastBuildDate`; the RSS feed drives the social auto-poster).
+4. Commit and push to `main`; Netlify deploys automatically.
 
-## Important Notes
+## Roster changes
 
-- **Editorial Workflow**: Posts go through Draft → In Review → Ready states before publishing
-- **Images**: Upload images through the media library; they'll be stored in `/images/blog/`
-- **Markdown**: The body field supports Markdown formatting
-- **Build Process**: After publishing, Netlify will automatically rebuild the site (takes ~1-2 minutes)
-
-## File Structure
-
-```
-/
-├── admin/
-│   ├── index.html      # CMS admin page
-│   └── config.yml      # CMS configuration
-├── _posts/             # Markdown blog posts (managed by CMS)
-├── blog/               # Generated HTML blog posts
-├── images/
-│   └── blog/           # Blog post images
-└── index.html          # Homepage (includes Identity widget)
-```
-
-## Technical Notes
-
-- **Backend**: Git Gateway (connects to GitHub via Netlify)
-- **Authentication**: Netlify Identity (free tier)
-- **Branch**: All changes commit to `main` branch
-
-## Need Help?
-
-Contact your web administrator or refer to the Decap CMS documentation at https://decapcms.org/docs/
+Update, in this order: the nav dropdown on every page, `our-team.html` (grid class so no row has an orphan card), the paralegal sidebar box on affected attorney pages, the attorney-count stat on `index.html`, and any directory listings.

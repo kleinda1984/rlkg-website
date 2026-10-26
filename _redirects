@@ -266,3 +266,7 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 /blog/bankruptcy-threshold-adjustment-act-2026 /blog/bankruptcy-threshold-adjustment-act-2026.html 301
 /blog/georgia-quiet-title-special-master /blog/georgia-quiet-title-special-master.html 301
 /index.html / 301!
+
+# Catch-all: extensionless URL -> .html (non-forced, so existing files are served directly)
+/blog/:slug  /blog/:slug.html  301
+/:page       /:page.html       301
