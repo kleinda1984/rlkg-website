@@ -376,6 +376,20 @@
             transform: translateY(-2px);
         }
 
+        /* Attorneys in this practice area */
+        .practice-attorneys { background: var(--gray-100, #f5f5f5); padding: 56px 40px; }
+        .practice-attorneys-inner { max-width: 1100px; margin: 0 auto; }
+        .practice-attorneys-label { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--blue-accent); font-weight: 600; margin-bottom: 8px; }
+        .practice-attorneys h2 { font-family: var(--serif); font-size: 30px; color: var(--navy); margin-bottom: 8px; }
+        .practice-attorneys-intro { color: var(--gray-600, #555); font-size: 16px; margin-bottom: 28px; }
+        .attorney-chip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+        .attorney-chip { display: flex; align-items: center; gap: 14px; background: var(--white); border: 1px solid var(--gray-200, #e5e7eb); border-radius: 8px; padding: 14px 16px; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .attorney-chip:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+        .attorney-chip img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+        .attorney-chip-name { font-weight: 600; color: var(--navy); font-size: 15px; line-height: 1.3; }
+        .attorney-chip-role { font-size: 13px; color: var(--gray-600, #555); margin-top: 2px; }
+        .attorney-chip-cta { font-size: 13px; color: var(--blue-accent); font-weight: 600; margin-top: 2px; }
+        @media (max-width: 768px) { .practice-attorneys { padding: 40px 24px; } .attorney-chip-grid { grid-template-columns: 1fr; } }
         /* Footer */
         .footer {
             background: var(--navy);
@@ -987,6 +1001,44 @@
         <p>After filing your petition, an automatic stay halts most collection efforts. For Chapter 7, a trustee takes over and manages the liquidation. For Chapter 11, your company typically continues operations under court protection. Throughout the process, we handle creditor communications, regulatory compliance, and the development of your path forward—whether that's emergence as a reorganized entity or efficient liquidation.</p>        <h2>Contact Our Atlanta Bankruptcy Team</h2>
 
         <p>If your business faces financial distress, early consultation can preserve options and prevent costly mistakes. Contact Rountree Leitman Klein & Geer, LLC in Atlanta today to discuss your situation with experienced business bankruptcy counsel.</p>
+    </section>
+
+    <section class="practice-attorneys">
+        <div class="practice-attorneys-inner">
+            <div class="practice-attorneys-label">Our Team</div>
+            <h2>Attorneys Practicing in This Area</h2>
+            <p class="practice-attorneys-intro">Select an attorney to view their profile, experience, and direct contact information.</p>
+            <div class="attorney-chip-grid">
+                <a href="will-rountree.html" class="attorney-chip">
+                    <img src="images/will-rountree-profile.png" alt="William A. Rountree" width="600" height="600" loading="lazy">
+                    <div><div class="attorney-chip-name">William A. Rountree</div><div class="attorney-chip-role">Partner</div><div class="attorney-chip-cta">View Profile &rarr;</div></div>
+                </a>
+                <a href="will-geer.html" class="attorney-chip">
+                    <img src="images/will-geer-profile.png" alt="Will B. Geer" width="600" height="600" loading="lazy">
+                    <div><div class="attorney-chip-name">Will B. Geer</div><div class="attorney-chip-role">Partner</div><div class="attorney-chip-cta">View Profile &rarr;</div></div>
+                </a>
+                <a href="elizabeth-childers.html" class="attorney-chip">
+                    <img src="images/elizabeth-childers-profile.png" alt="Elizabeth A. Childers" width="600" height="600" loading="lazy">
+                    <div><div class="attorney-chip-name">Elizabeth A. Childers</div><div class="attorney-chip-role">Partner</div><div class="attorney-chip-cta">View Profile &rarr;</div></div>
+                </a>
+                <a href="ceci-christy.html" class="attorney-chip">
+                    <img src="images/ceci-christy-profile.png" alt="Ceci Christy" width="600" height="600" loading="lazy">
+                    <div><div class="attorney-chip-name">Ceci Christy</div><div class="attorney-chip-role">Senior Counsel</div><div class="attorney-chip-cta">View Profile &rarr;</div></div>
+                </a>
+                <a href="caitlyn-powers.html" class="attorney-chip">
+                    <img src="images/caitlyn-powers-profile.png" alt="Caitlyn Powers" width="600" height="600" loading="lazy">
+                    <div><div class="attorney-chip-name">Caitlyn Powers</div><div class="attorney-chip-role">Associate</div><div class="attorney-chip-cta">View Profile &rarr;</div></div>
+                </a>
+                <a href="jonathan-clements.html" class="attorney-chip">
+                    <img src="images/jonathan-clements-profile.png" alt="Jonathan Clements" width="600" height="600" loading="lazy">
+                    <div><div class="attorney-chip-name">Jonathan Clements</div><div class="attorney-chip-role">Associate</div><div class="attorney-chip-cta">View Profile &rarr;</div></div>
+                </a>
+                <a href="annaclaire-bowman.html" class="attorney-chip">
+                    <img src="images/annaclaire-bowman-profile.png" alt="AnnaClaire Bowman" width="600" height="600" loading="lazy">
+                    <div><div class="attorney-chip-name">AnnaClaire Bowman</div><div class="attorney-chip-role">Associate</div><div class="attorney-chip-cta">View Profile &rarr;</div></div>
+                </a>
+            </div>
+        </div>
     </section>
 
     <section class="faq-section">
