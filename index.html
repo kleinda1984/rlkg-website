@@ -414,11 +414,16 @@
         }
 
         .practice-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 24px;
             max-width: 1400px;
             margin: 0 auto;
+        }
+        .practice-grid > .practice-card {
+            flex: 0 1 calc((100% - 48px) / 3);
+            max-width: calc((100% - 48px) / 3);
         }
 
         .practice-card {
@@ -907,8 +912,9 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 1200px) {
-            .practice-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .practice-grid > .practice-card {
+                flex-basis: calc((100% - 24px) / 2);
+                max-width: calc((100% - 24px) / 2);
             }
             .team-grid {
                 grid-template-columns: repeat(3, 1fr);
@@ -932,8 +938,9 @@
         }
 
         @media (max-width: 600px) {
-            .practice-grid {
-                grid-template-columns: 1fr;
+            .practice-grid > .practice-card {
+                flex-basis: 100%;
+                max-width: 100%;
             }
             .team-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1299,8 +1306,11 @@
 
             /* Practice grid fixes */
             .practice-grid {
-                grid-template-columns: 1fr !important;
                 padding: 0 20px !important;
+            }
+            .practice-grid > .practice-card {
+                flex-basis: 100% !important;
+                max-width: 100% !important;
             }
 
             .practice-areas, .team, .accolades, .cta {
@@ -1565,8 +1575,18 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
                     </svg>
                 </div>
-                <h3 class="practice-title">Litigation</h3>
-                <p class="practice-desc">Skilled trial advocacy in business, commercial, and real estate litigation matters—from bench trials to appeals.</p>
+                <h3 class="practice-title">Business &amp; Commercial Litigation</h3>
+                <p class="practice-desc">Contract, partnership, and business disputes, construction claims, and commercial evictions—from bench trials to appeals.</p>
+                <span class="practice-link">Learn More →</span>
+            </a>
+            <a href="real-estate-litigation.html" class="practice-card">
+                <div class="practice-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                </div>
+                <h3 class="practice-title">Real Estate Litigation</h3>
+                <p class="practice-desc">Quiet title, boundary and easement disputes, partition, foreclosure litigation, liens, and excess funds recovery.</p>
                 <span class="practice-link">Learn More →</span>
             </a>
         </div>
