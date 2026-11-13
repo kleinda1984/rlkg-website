@@ -146,6 +146,15 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 /blog/category/irs /blog.html?category=taxes 301
 /blog/category/* /blog.html 301
 
+# ===========================================
+# LEGACY WEEBLY BLOG ARCHIVES
+# Old monthly archive pages and a truncated
+# post slug reported as 404 in Search Console
+# (Nov 2026)
+# ===========================================
+/blog/archives/* /blog.html 301
+/blog/four- /blog/super-lawyers-2023.html 301
+
 
 # ===========================================
 # MAIN PAGE REDIRECTS
@@ -196,6 +205,7 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 /alexandra-dishun /our-team.html 301
 /alexandra-m-dishun.html /our-team.html 301
 /alexandra-m-dishun /our-team.html 301
+/william-matthews.html /our-team.html 301
 
 
 # ===========================================
