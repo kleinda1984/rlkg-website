@@ -265,6 +265,9 @@ http://rlkglaw.com/*        https://www.rlkglaw.com/:splat    301!
 /blog/adversary-proceeding-bankruptcy /blog/adversary-proceeding-bankruptcy.html 301
 /blog/bankruptcy-threshold-adjustment-act-2026 /blog/bankruptcy-threshold-adjustment-act-2026.html 301
 /blog/georgia-quiet-title-special-master /blog/georgia-quiet-title-special-master.html 301
+/blog/chapter-7-vs-chapter-13-georgia /blog/chapter-7-vs-chapter-13-georgia.html 301
+/blog/georgia-bankruptcy-means-test /blog/georgia-bankruptcy-means-test.html 301
+/blog/subchapter-v-eligibility-7-5-million /blog/subchapter-v-eligibility-7-5-million.html 301
 /index.html / 301!
 
 # Catch-all: extensionless URL -> .html (non-forced, so existing files are served directly)
